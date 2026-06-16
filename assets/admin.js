@@ -1,5 +1,5 @@
 /* ============================================================
-   云鲜 YUNXIAN · admin.js
+   云超鲜 YUNXIAN · admin.js
    Renders shared sidebar + handles nav / toggles / toast
    ============================================================ */
 (function () {
@@ -42,7 +42,7 @@
   function renderSidebar() {
     var el = document.getElementById('side'); if (!el) return;
     var cur = document.body.getAttribute('data-page');
-    var h = '<div class="brand"><div class="logo">鲜</div><div><div class="bt">云鲜运营台</div><div class="bs">YUNXIAN CONSOLE</div></div></div>';
+    var h = '<div class="brand"><div class="logo">鲜</div><div><div class="bt">云超鲜运营台</div><div class="bs">YUNXIAN CONSOLE</div></div></div>';
     NAV.forEach(function (g) {
       h += '<div class="nav-group">' + g.group + '</div>';
       g.items.forEach(function (it) {
