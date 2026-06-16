@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>编辑套餐 · 云鲜运营台</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/admin.css">
+</head>
+<body data-page="products">
+<div class="admin">
+  <aside class="sidebar" id="side"></aside>
+  <div class="main">
+    <header class="topbar">
+      <div class="row center gap10"><button class="ticon" data-go="products.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6" stroke-linecap="round"/></svg></button><div><div class="crumb">商品 / 套餐 · 编辑</div><div class="ptitle">晶香什锦套餐</div></div></div>
+      <div class="row gap10" style="margin-left:auto;">
+        <button class="abtn abtn-line" data-go="products.html">取消</button>
+        <button class="abtn abtn-ghost" data-toast="草稿已保存">存草稿</button>
+        <button class="abtn abtn-primary" data-toast="套餐已保存并上架 🎉" >保存并上架</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="grid" style="grid-template-columns:1.9fr 1fr;align-items:start;">
+        <!-- left form -->
+        <div class="col gap18">
+          <!-- basic -->
+          <div class="panel">
+            <div class="panel-head"><div class="ph-t">基本信息</div></div>
+            <div class="panel-body">
+              <div class="field"><label class="label">套餐名称 <span class="req">*</span></label><input class="input" value="晶香什锦套餐"></div>
+              <div class="grid g-2" style="gap:18px;">
+                <div class="field"><label class="label">所属分类 <span class="req">*</span></label><select class="select"><option>套餐</option><option>单点</option><option>午茶</option><option>零食</option></select></div>
+                <div class="field"><label class="label">所属频道</label><select class="select"><option>123新食堂</option><option>云鲜超</option></select></div>
+              </div>
+              <div class="field"><label class="label">营销描述</label><input class="input" value="2荤1素1主食 · 当日现炒不隔夜 · 大师监制"></div>
+              <div class="field" style="margin-bottom:0;"><label class="label">商品主图</label>
+                <div class="row gap10">
+                  <div class="mini-media g-rose" style="width:80px;height:80px;font-size:38px;border:1px solid var(--hairline);">🍱</div>
+                  <div class="mini-media g-warm" style="width:80px;height:80px;font-size:38px;">🍗</div>
+                  <div style="width:80px;height:80px;border-radius:10px;border:1px dashed var(--ink-4);display:grid;place-items:center;color:var(--ink-3);cursor:pointer;" data-toast="上传图片"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></div>
+                </div>
+                <div class="hint">建议尺寸 750×750，最多 5 张，首图将展示在列表</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- composition -->
+          <div class="panel">
+            <div class="panel-head"><div class="ph-t">套餐搭配</div><div class="ph-s" style="margin-left:auto;">定义荤素主食结构，顾客可在小程序更换</div></div>
+            <div class="panel-body col gap12">
+              <div class="row center gap12" style="padding:12px;border:1px solid var(--hairline);border-radius:12px;">
+                <span class="badge badge-brand" style="height:26px;">1 荤</span>
+                <div class="mini-media g-warm">🍗</div>
+                <div class="flex1"><div class="tt-name">招牌麻油鸡</div><div class="tt-sub">可更换 · 提供 6 种荤菜</div></div>
+                <div class="switch on" title="允许更换"><i></i></div>
+                <button class="abtn abtn-sm abtn-ghost" data-toast="移除">删除</button>
+              </div>
+              <div class="row center gap12" style="padding:12px;border:1px solid var(--hairline);border-radius:12px;">
+                <span class="badge badge-brand" style="height:26px;">2 荤</span>
+                <div class="mini-media g-cream">🥩</div>
+                <div class="flex1"><div class="tt-name">红烧肉</div><div class="tt-sub">可更换 · 提供 6 种荤菜</div></div>
+                <div class="switch on"><i></i></div>
+                <button class="abtn abtn-sm abtn-ghost" data-toast="移除">删除</button>
+              </div>
+              <div class="row center gap12" style="padding:12px;border:1px solid var(--hairline);border-radius:12px;">
+                <span class="badge badge-green" style="height:26px;">1 素</span>
+                <div class="mini-media g-green">🥬</div>
+                <div class="flex1"><div class="tt-name">蒜蓉时蔬</div><div class="tt-sub">可更换 · 提供 8 种素菜</div></div>
+                <div class="switch on"><i></i></div>
+                <button class="abtn abtn-sm abtn-ghost" data-toast="移除">删除</button>
+              </div>
+              <div class="row center gap12" style="padding:12px;border:1px solid var(--hairline);border-radius:12px;">
+                <span class="badge badge-gold" style="height:26px;">主食</span>
+                <div class="mini-media g-gold">🍚</div>
+                <div class="flex1"><div class="tt-name">五常米饭</div><div class="tt-sub">可更换为杂粮饭 / 面食</div></div>
+                <div class="switch on"><i></i></div>
+                <button class="abtn abtn-sm abtn-ghost" data-toast="移除">删除</button>
+              </div>
+              <button class="add-slot" style="height:46px;" data-toast="从菜品库选择"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg> 添加菜位</button>
+            </div>
+          </div>
+
+          <!-- nutrition & tags -->
+          <div class="panel">
+            <div class="panel-head"><div class="ph-t">营养与标签</div></div>
+            <div class="panel-body">
+              <div class="grid g-4" style="gap:14px;margin-bottom:18px;">
+                <div class="field" style="margin:0;"><label class="label">热量(千卡)</label><input class="input" value="628"></div>
+                <div class="field" style="margin:0;"><label class="label">蛋白质(g)</label><input class="input" value="38"></div>
+                <div class="field" style="margin:0;"><label class="label">脂肪(g)</label><input class="input" value="22"></div>
+                <div class="field" style="margin:0;"><label class="label">碳水(g)</label><input class="input" value="68"></div>
+              </div>
+              <label class="label">营销标签</label>
+              <div class="row gap8 wrap">
+                <span class="chip brand active" data-seg>招牌</span>
+                <span class="chip" data-seg data-toast="已选 少油少盐">少油少盐</span>
+                <span class="chip" data-seg data-toast="已选 月售爆款">月售爆款</span>
+                <span class="chip" data-seg data-toast="已选 新品">新品</span>
+                <span class="chip" style="border:1px dashed var(--ink-4);background:transparent;" data-toast="新增标签">+ 自定义</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- right: price + preview -->
+        <div class="col gap18" style="position:sticky;top:84px;">
+          <div class="panel">
+            <div class="panel-head"><div class="ph-t">价格与库存</div></div>
+            <div class="panel-body">
+              <div class="field"><label class="label">划线价(元)</label><input class="input" value="38.00"></div>
+              <div class="field"><label class="label">会员价(元) <span class="req">*</span></label><input class="input" value="21.00"></div>
+              <div class="field"><label class="label">团餐价(元)</label><input class="input" value="18.00"><div class="hint">企业认证客户可见</div></div>
+              <div class="field" style="margin-bottom:0;"><label class="label">每日供应上限</label><input class="input" value="120"></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head"><div class="ph-t">小程序预览</div></div>
+            <div class="panel-body col center" style="background:var(--surface-2);border-radius:0 0 var(--r-lg) var(--r-lg);">
+              <div style="width:240px;background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--sh-2);">
+                <div class="media g-rose" style="height:140px;"><span class="emoji" style="font-size:64px;">🍱</span><span class="ph-count">1/5</span></div>
+                <div style="padding:12px;">
+                  <div class="row center gap6"><span class="badge badge-new">招牌</span><span class="badge badge-green">少油少盐</span></div>
+                  <div class="t-h3 mt8">晶香什锦套餐</div>
+                  <div class="t-cap mt2">2荤1素1主食 · 当日现炒</div>
+                  <div class="row center between mt10">
+                    <div class="row" style="align-items:baseline;gap:6px;"><span class="price t-brand" style="font-size:20px;"><span class="cur">¥</span>21</span><span class="price-old" style="font-size:12px;">¥38</span></div>
+                    <button class="add-btn" data-toast="预览"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+                  </div>
+                </div>
+              </div>
+              <div class="hint" style="margin-top:14px;text-align:center;">顾客端实时效果预览</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="../assets/admin.js"></script>
+</body>
+</html>

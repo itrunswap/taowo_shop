@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数据报表 · 云鲜运营台</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/admin.css">
+</head>
+<body data-page="analytics">
+<div class="admin">
+  <aside class="sidebar" id="side"></aside>
+  <div class="main">
+    <header class="topbar">
+      <div><div class="crumb">分析与设置</div><div class="ptitle">数据报表</div></div>
+      <div class="row gap10" style="margin-left:auto;">
+        <div class="aseg"><div class="s" data-seg data-toast="近7天">近7天</div><div class="s active" data-seg>近30天</div><div class="s" data-seg data-toast="本季度">本季度</div></div>
+        <button class="abtn abtn-line" data-toast="报表已导出 Excel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" stroke-linecap="round" stroke-linejoin="round"/></svg>导出</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="page-title" style="margin-bottom:18px;">经营数据分析</div>
+
+      <div class="grid g-4" style="margin-bottom:18px;">
+        <div class="stat"><div class="s-label">月度营收</div><div class="s-value">¥2.46M</div><div class="s-delta up">▲ 18.2%</div></div>
+        <div class="stat"><div class="s-label">客单价</div><div class="s-value">¥27.6</div><div class="s-delta up">▲ 2.1%</div></div>
+        <div class="stat"><div class="s-label">会员复购率</div><div class="s-value">64%</div><div class="s-delta up">▲ 4.5%</div></div>
+        <div class="stat"><div class="s-label">餐损率</div><div class="s-value">2.3%</div><div class="s-delta down">▼ 0.6% 优化</div></div>
+      </div>
+
+      <!-- revenue line -->
+      <div class="panel" style="margin-bottom:18px;">
+        <div class="panel-head"><div class="ph-t">营收趋势 (近30天)</div><div class="row gap16" style="margin-left:auto;"><span class="legend"><i style="background:var(--brand)"></i>本月</span><span class="legend"><i style="background:var(--ink-4)"></i>上月</span></div></div>
+        <div class="panel-body">
+          <svg viewBox="0 0 720 220" style="width:100%;height:220px;">
+            <defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF5A4D" stop-opacity=".22"/><stop offset="1" stop-color="#FF5A4D" stop-opacity="0"/></linearGradient></defs>
+            <g stroke="#EFEAE4" stroke-width="1"><line x1="0" y1="40" x2="720" y2="40"/><line x1="0" y1="90" x2="720" y2="90"/><line x1="0" y1="140" x2="720" y2="140"/><line x1="0" y1="190" x2="720" y2="190"/></g>
+            <path d="M0,160 C60,150 100,120 160,128 C220,136 260,90 320,84 C380,78 420,110 480,96 C540,82 580,50 640,46 L720,40" fill="none" stroke="#C4C4C9" stroke-width="2.5" stroke-dasharray="5 5"/>
+            <path d="M0,178 C60,170 110,150 170,150 C230,150 270,110 330,104 C390,98 430,128 490,112 C550,96 600,70 660,56 L720,48 L720,210 L0,210 Z" fill="url(#ga)"/>
+            <path d="M0,178 C60,170 110,150 170,150 C230,150 270,110 330,104 C390,98 430,128 490,112 C550,96 600,70 660,56 L720,48" fill="none" stroke="#FF5A4D" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="330" cy="104" r="5" fill="#fff" stroke="#FF5A4D" stroke-width="3"/>
+            <circle cx="660" cy="56" r="5" fill="#fff" stroke="#FF5A4D" stroke-width="3"/>
+          </svg>
+          <div class="row between" style="padding:0 4px;"><span class="blabel" style="font-size:11px;color:var(--ink-3)">05/17</span><span class="blabel" style="font-size:11px;color:var(--ink-3)">05/24</span><span class="blabel" style="font-size:11px;color:var(--ink-3)">05/31</span><span class="blabel" style="font-size:11px;color:var(--ink-3)">06/07</span><span class="blabel" style="font-size:11px;color:var(--ink-3)">06/16</span></div>
+        </div>
+      </div>
+
+      <div class="grid g-2" style="margin-bottom:18px;">
+        <!-- category bars -->
+        <div class="panel"><div class="panel-head"><div class="ph-t">品类销售排行</div></div>
+          <div class="panel-body col gap16">
+            <div class="row center gap12"><span class="tt-name" style="width:80px;font-size:13px;">套餐</span><div class="prow-bar flex1"><i style="width:88%"></i></div><b style="font-size:13px;width:54px;text-align:right;">¥1.08M</b></div>
+            <div class="row center gap12"><span class="tt-name" style="width:80px;font-size:13px;">生鲜</span><div class="prow-bar flex1"><i style="width:62%"></i></div><b style="font-size:13px;width:54px;text-align:right;">¥620K</b></div>
+            <div class="row center gap12"><span class="tt-name" style="width:80px;font-size:13px;">午茶</span><div class="prow-bar flex1"><i style="width:44%"></i></div><b style="font-size:13px;width:54px;text-align:right;">¥420K</b></div>
+            <div class="row center gap12"><span class="tt-name" style="width:80px;font-size:13px;">单点</span><div class="prow-bar flex1"><i style="width:30%"></i></div><b style="font-size:13px;width:54px;text-align:right;">¥260K</b></div>
+            <div class="row center gap12"><span class="tt-name" style="width:80px;font-size:13px;">零食</span><div class="prow-bar flex1"><i style="width:14%"></i></div><b style="font-size:13px;width:54px;text-align:right;">¥80K</b></div>
+          </div>
+        </div>
+        <!-- time distribution -->
+        <div class="panel"><div class="panel-head"><div class="ph-t">下单时段分布</div></div>
+          <div class="panel-body">
+            <div class="bars" style="height:200px;">
+              <div class="bcol"><div class="bar" style="height:20%"></div><div class="blabel">7点</div></div>
+              <div class="bcol"><div class="bar" style="height:42%"></div><div class="blabel">8点</div></div>
+              <div class="bcol"><div class="bar alt" style="height:95%"></div><div class="blabel">9点</div></div>
+              <div class="bcol"><div class="bar alt" style="height:88%"></div><div class="blabel">10点</div></div>
+              <div class="bcol"><div class="bar" style="height:50%"></div><div class="blabel">11点</div></div>
+              <div class="bcol"><div class="bar" style="height:30%"></div><div class="blabel">14点</div></div>
+              <div class="bcol"><div class="bar" style="height:58%"></div><div class="blabel">17点</div></div>
+            </div>
+            <div class="hint" style="text-align:center;margin-top:10px;">9-10 点为团餐预订高峰，建议提前备货</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- top items table -->
+      <div class="panel">
+        <div class="panel-head"><div class="ph-t">单品销售明细 Top 5</div></div>
+        <table class="table">
+          <thead><tr><th>排名</th><th>商品</th><th>销量</th><th>销售额</th><th>毛利率</th><th>趋势</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge badge-new">1</span></td><td><div class="row center gap10"><div class="mini-media g-rose">🍱</div><span class="tt-name">晶香什锦套餐</span></div></td><td>9,840</td><td class="tt-name">¥206K</td><td>42%</td><td><span class="pill pill-green">▲ 12%</span></td></tr>
+            <tr><td><span class="badge badge-gold">2</span></td><td><div class="row center gap10"><div class="mini-media g-warm">🍗</div><span class="tt-name">麻油鸡套餐</span></div></td><td>8,210</td><td class="tt-name">¥229K</td><td>38%</td><td><span class="pill pill-green">▲ 8%</span></td></tr>
+            <tr><td><span class="badge badge-ink">3</span></td><td><div class="row center gap10"><div class="mini-media g-gold">🧋</div><span class="tt-name">鲜萃柠檬茶</span></div></td><td>12,300</td><td class="tt-name">¥98K</td><td>65%</td><td><span class="pill pill-green">▲ 22%</span></td></tr>
+            <tr><td><span class="badge badge-ink">4</span></td><td><div class="row center gap10"><div class="mini-media g-cream">🍲</div><span class="tt-name">回锅肉套餐</span></div></td><td>6,940</td><td class="tt-name">¥187K</td><td>40%</td><td><span class="pill pill-gray">— 0%</span></td></tr>
+            <tr><td><span class="badge badge-ink">5</span></td><td><div class="row center gap10"><div class="mini-media g-green">🥗</div><span class="tt-name">轻食鸡胸沙拉</span></div></td><td>5,180</td><td class="tt-name">¥98K</td><td>48%</td><td><span class="pill pill-red">▼ 3%</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="../assets/admin.js"></script>
+</body>
+</html>

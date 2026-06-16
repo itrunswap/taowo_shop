@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数据看板 · 云鲜运营台</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/admin.css">
+</head>
+<body data-page="dashboard">
+<div class="admin">
+  <aside class="sidebar" id="side"></aside>
+  <div class="main">
+    <header class="topbar">
+      <div><div class="crumb">概览</div><div class="ptitle">数据看板</div></div>
+      <div class="tsearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4" stroke-linecap="round"/></svg>搜索订单 / 商品 / 会员</div>
+      <button class="ticon" data-toast="暂无新通知"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 7 3 9H3c0-2 3-2 3-9M10 21a2 2 0 0 0 4 0" stroke-linejoin="round"/></svg><span class="dot"></span></button>
+      <button class="ticon" data-toast="帮助中心"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.8.4-1 .9-1 1.7M12 17h.01" stroke-linecap="round"/></svg></button>
+    </header>
+
+    <main class="content">
+      <div class="row between center" style="margin-bottom:20px;">
+        <div><div class="page-title">早安，运营管理员 👋</div><div class="page-desc">今天是 2026-06-16 · 平台运行平稳，5 件事项待处理</div></div>
+        <div class="row gap10">
+          <div class="aseg"><div class="s" data-seg data-toast="今日">今日</div><div class="s active" data-seg>本周</div><div class="s" data-seg data-toast="本月">本月</div></div>
+          <button class="abtn abtn-line" data-toast="报表已导出"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" stroke-linecap="round" stroke-linejoin="round"/></svg>导出</button>
+        </div>
+      </div>
+
+      <!-- stats -->
+      <div class="grid g-4">
+        <div class="stat">
+          <div class="s-top"><div class="s-ic tint-brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke-linecap="round"/></svg></div><span class="pill pill-green">实时</span></div>
+          <div class="s-label">今日营收 (元)</div><div class="s-value">¥86,420</div>
+          <div class="s-delta up">▲ 12.4% 较昨日</div>
+        </div>
+        <div class="stat">
+          <div class="s-top"><div class="s-ic tint-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l4 4v16H6z" stroke-linejoin="round"/><path d="M9 12h6M9 16h4" stroke-linecap="round"/></svg></div></div>
+          <div class="s-label">今日订单 (笔)</div><div class="s-value">3,128</div>
+          <div class="s-delta up">▲ 8.1% 较昨日</div>
+        </div>
+        <div class="stat">
+          <div class="s-top"><div class="s-ic tint-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.3 2.7-5 6-5s6 1.7 6 5M16 11l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div class="s-label">活跃会员 (人)</div><div class="s-value">12,860</div>
+          <div class="s-delta up">▲ 3.6% 较上周</div>
+        </div>
+        <div class="stat">
+          <div class="s-top"><div class="s-ic tint-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5 11-11" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div class="s-label">准时履约率</div><div class="s-value">98.6%</div>
+          <div class="s-delta down">▼ 0.3% 需关注</div>
+        </div>
+      </div>
+
+      <!-- charts -->
+      <div class="grid g-3" style="margin-top:18px;grid-template-columns:2fr 1fr;">
+        <div class="panel">
+          <div class="panel-head"><div class="ph-t">近 7 日营收趋势</div><div style="margin-left:auto;" class="row gap16"><span class="legend"><i style="background:var(--brand)"></i>营收</span><span class="legend"><i style="background:var(--gold)"></i>订单</span></div></div>
+          <div class="panel-body">
+            <div class="bars">
+              <div class="bcol"><div class="bar" style="height:52%"></div><div class="blabel">06/10</div></div>
+              <div class="bcol"><div class="bar" style="height:68%"></div><div class="blabel">06/11</div></div>
+              <div class="bcol"><div class="bar" style="height:45%"></div><div class="blabel">06/12</div></div>
+              <div class="bcol"><div class="bar" style="height:80%"></div><div class="blabel">06/13</div></div>
+              <div class="bcol"><div class="bar alt" style="height:38%"></div><div class="blabel">06/14</div></div>
+              <div class="bcol"><div class="bar alt" style="height:30%"></div><div class="blabel">06/15</div></div>
+              <div class="bcol"><div class="bar" style="height:95%"></div><div class="blabel">今日</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><div class="ph-t">渠道营收占比</div></div>
+          <div class="panel-body col center">
+            <svg width="150" height="150" viewBox="0 0 42 42">
+              <circle cx="21" cy="21" r="15.9" fill="none" stroke="#F0ECE7" stroke-width="6"/>
+              <circle cx="21" cy="21" r="15.9" fill="none" stroke="#FF5A4D" stroke-width="6" stroke-dasharray="48 52" stroke-dashoffset="25" stroke-linecap="round"/>
+              <circle cx="21" cy="21" r="15.9" fill="none" stroke="#F5A623" stroke-width="6" stroke-dasharray="27 73" stroke-dashoffset="-23" stroke-linecap="round"/>
+              <circle cx="21" cy="21" r="15.9" fill="none" stroke="#2BB673" stroke-width="6" stroke-dasharray="15 85" stroke-dashoffset="-50" stroke-linecap="round"/>
+              <text x="21" y="20" text-anchor="middle" font-size="6" font-weight="800" fill="#1D1D1F">¥86K</text>
+              <text x="21" y="26" text-anchor="middle" font-size="3" fill="#9A9AA0">今日</text>
+            </svg>
+            <div class="col gap8 fill" style="margin-top:16px;">
+              <div class="row between"><span class="legend"><i style="background:#FF5A4D"></i>123新食堂</span><b style="font-size:13px;">48%</b></div>
+              <div class="row between"><span class="legend"><i style="background:#F5A623"></i>云鲜超</span><b style="font-size:13px;">27%</b></div>
+              <div class="row between"><span class="legend"><i style="background:#2BB673"></i>本地生活</span><b style="font-size:13px;">15%</b></div>
+              <div class="row between"><span class="legend"><i style="background:#F0ECE7"></i>其他渠道</span><b style="font-size:13px;">10%</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- lower row -->
+      <div class="grid g-3" style="margin-top:18px;grid-template-columns:2fr 1fr;">
+        <div class="panel">
+          <div class="panel-head"><div class="ph-t">实时订单</div><div class="ph-s" style="margin-left:auto;">每 30 秒刷新</div></div>
+          <table class="table">
+            <thead><tr><th>订单号</th><th>企业 / 客户</th><th>套餐</th><th>金额</th><th>状态</th></tr></thead>
+            <tbody>
+              <tr data-go="orders.html"><td class="tt-name">#YX0616-3041</td><td>德国中心·行政部</td><td>晶香什锦套餐 ×12</td><td class="tt-name">¥252</td><td><span class="pill pill-gold">备餐中</span></td></tr>
+              <tr data-go="orders.html"><td class="tt-name">#YX0616-3040</td><td>张敏 (个人)</td><td>麻油鸡套餐 ×1</td><td class="tt-name">¥24</td><td><span class="pill pill-blue">配送中</span></td></tr>
+              <tr data-go="orders.html"><td class="tt-name">#YX0616-3039</td><td>云图科技·5F</td><td>回锅肉套餐 ×30</td><td class="tt-name">¥720</td><td><span class="pill pill-green">已送达</span></td></tr>
+              <tr data-go="orders.html"><td class="tt-name">#YX0616-3038</td><td>周磊 (拼好饭)</td><td>狮子头套餐 ×5</td><td class="tt-name">¥110</td><td><span class="pill pill-gray">待成团</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><div class="ph-t">今日热销榜</div><a class="ph-s" style="margin-left:auto;color:var(--brand);font-weight:600;" data-go="products.html">查看全部</a></div>
+          <div class="panel-body col gap16">
+            <div class="row center gap12"><div class="mini-media g-rose">🍱</div><div class="flex1"><div class="tt-name" style="font-size:13.5px;">晶香什锦套餐</div><div class="prow-bar mt6"><i style="width:92%"></i></div></div><b style="font-size:13px;">386</b></div>
+            <div class="row center gap12"><div class="mini-media g-warm">🍗</div><div class="flex1"><div class="tt-name" style="font-size:13.5px;">麻油鸡套餐</div><div class="prow-bar mt6"><i style="width:74%"></i></div></div><b style="font-size:13px;">298</b></div>
+            <div class="row center gap12"><div class="mini-media g-cream">🍲</div><div class="flex1"><div class="tt-name" style="font-size:13.5px;">回锅肉套餐</div><div class="prow-bar mt6"><i style="width:60%"></i></div></div><b style="font-size:13px;">241</b></div>
+            <div class="row center gap12"><div class="mini-media g-green">🥗</div><div class="flex1"><div class="tt-name" style="font-size:13.5px;">轻食鸡胸沙拉</div><div class="prow-bar mt6"><i style="width:45%"></i></div></div><b style="font-size:13px;">180</b></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- todo -->
+      <div class="panel" style="margin-top:18px;">
+        <div class="panel-head"><div class="ph-t">待办事项</div><span class="badge badge-brand">5</span></div>
+        <div class="panel-body grid g-3">
+          <div class="row center gap12" style="padding:14px;border-radius:14px;background:#FFE9E7;"><span style="font-size:24px;">⚠️</span><div class="flex1"><div class="tt-name" style="font-size:13.5px;">3 笔订单超时未接</div><div class="tt-sub">需立即处理</div></div><button class="abtn abtn-sm abtn-primary" data-go="orders.html">处理</button></div>
+          <div class="row center gap12" style="padding:14px;border-radius:14px;background:var(--gold-soft);"><span style="font-size:24px;">📋</span><div class="flex1"><div class="tt-name" style="font-size:13.5px;">8 份加盟申请待审核</div><div class="tt-sub">管家招募</div></div><button class="abtn abtn-sm abtn-line" data-go="franchise.html">审核</button></div>
+          <div class="row center gap12" style="padding:14px;border-radius:14px;background:var(--green-soft);"><span style="font-size:24px;">📅</span><div class="flex1"><div class="tt-name" style="font-size:13.5px;">下周菜单待排期</div><div class="tt-sub">06/23 - 06/29</div></div><button class="abtn abtn-sm abtn-line" data-go="menu-schedule.html">去排</button></div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="../assets/admin.js"></script>
+</body>
+</html>

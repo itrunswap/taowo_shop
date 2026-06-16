@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>订单管理 · 云鲜运营台</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/admin.css">
+</head>
+<body data-page="orders">
+<div class="admin">
+  <aside class="sidebar" id="side"></aside>
+  <div class="main">
+    <header class="topbar">
+      <div><div class="crumb">餐饮运营</div><div class="ptitle">订单管理</div></div>
+      <div class="tsearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4" stroke-linecap="round"/></svg>搜索订单号 / 客户</div>
+      <button class="ticon" data-toast="导出订单"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </header>
+
+    <main class="content">
+      <div class="page-title" style="margin-bottom:18px;">订单管理</div>
+
+      <!-- stat -->
+      <div class="grid g-4" style="margin-bottom:18px;">
+        <div class="stat"><div class="s-label">今日订单</div><div class="s-value">3,128</div><div class="s-delta up">▲ 8.1%</div></div>
+        <div class="stat"><div class="s-label">待处理</div><div class="s-value" style="color:var(--brand);">23</div><div class="s-delta">超时 3 笔</div></div>
+        <div class="stat"><div class="s-label">配送中</div><div class="s-value" style="color:var(--blue);">156</div></div>
+        <div class="stat"><div class="s-label">今日退款</div><div class="s-value">¥1,240</div><div class="s-delta">12 笔</div></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-body" style="padding:0 20px;">
+          <div class="atabs">
+            <div class="at active" data-tab>全部 <span class="badge badge-ink">3128</span></div>
+            <div class="at" data-tab data-toast-on="待付款">待付款</div>
+            <div class="at" data-tab data-toast-on="待接单"><span style="color:var(--brand)">待接单 23</span></div>
+            <div class="at" data-tab data-toast-on="备餐中">备餐中</div>
+            <div class="at" data-tab data-toast-on="配送中">配送中</div>
+            <div class="at" data-tab data-toast-on="已完成">已完成</div>
+            <div class="at" data-tab data-toast-on="退款/售后">退款/售后</div>
+          </div>
+        </div>
+        <table class="table">
+          <thead><tr><th>订单号</th><th>客户 / 企业</th><th>商品</th><th>渠道</th><th>金额</th><th>下单时间</th><th>状态</th><th>操作</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="tt-name">#YX0616-3041</td>
+              <td><div class="tt-name">德国中心·行政部</div><div class="tt-sub">王经理 · 团餐</div></td>
+              <td>晶香什锦套餐 ×12</td><td><span class="badge badge-brand">123新食堂</span></td>
+              <td class="tt-name">¥252.00</td><td class="tt-sub">06-16 09:30</td>
+              <td><span class="pill pill-red">待接单</span></td>
+              <td><div class="row gap6"><button class="abtn abtn-sm abtn-primary" data-toast="已接单，进入备餐">接单</button><button class="abtn abtn-sm abtn-line" data-toast="查看订单详情">详情</button></div></td>
+            </tr>
+            <tr>
+              <td class="tt-name">#YX0616-3040</td>
+              <td><div class="tt-name">张敏</div><div class="tt-sub">个人会员</div></td>
+              <td>麻油鸡套餐 ×1</td><td><span class="badge badge-brand">123新食堂</span></td>
+              <td class="tt-name">¥24.00</td><td class="tt-sub">06-16 09:28</td>
+              <td><span class="pill pill-blue">配送中</span></td>
+              <td><div class="row gap6"><button class="abtn abtn-sm abtn-line" data-toast="查看物流">物流</button><button class="abtn abtn-sm abtn-ghost" data-toast="详情">详情</button></div></td>
+            </tr>
+            <tr>
+              <td class="tt-name">#YX0616-3039</td>
+              <td><div class="tt-name">云图科技·5F</div><div class="tt-sub">李行政 · 团餐</div></td>
+              <td>回锅肉套餐 ×30</td><td><span class="badge badge-brand">123新食堂</span></td>
+              <td class="tt-name">¥720.00</td><td class="tt-sub">06-16 09:10</td>
+              <td><span class="pill pill-green">已送达</span></td>
+              <td><div class="row gap6"><button class="abtn abtn-sm abtn-ghost" data-toast="详情">详情</button></div></td>
+            </tr>
+            <tr>
+              <td class="tt-name">#YX0616-3038</td>
+              <td><div class="tt-name">周磊 等 5 人</div><div class="tt-sub">拼好饭</div></td>
+              <td>狮子头套餐 ×5</td><td><span class="badge badge-gold">拼好饭</span></td>
+              <td class="tt-name">¥110.00</td><td class="tt-sub">06-16 08:55</td>
+              <td><span class="pill pill-gray">待成团 (4/5)</span></td>
+              <td><div class="row gap6"><button class="abtn abtn-sm abtn-ghost" data-toast="详情">详情</button></div></td>
+            </tr>
+            <tr>
+              <td class="tt-name">#YX0615-2987</td>
+              <td><div class="tt-name">陈芳</div><div class="tt-sub">个人会员</div></td>
+              <td>有机西兰花 等 5 件</td><td><span class="badge badge-green">云鲜超</span></td>
+              <td class="tt-name">¥89.50</td><td class="tt-sub">06-15 18:22</td>
+              <td><span class="pill pill-gold">退款中</span></td>
+              <td><div class="row gap6"><button class="abtn abtn-sm abtn-primary" data-toast="已同意退款">处理退款</button><button class="abtn abtn-sm abtn-ghost" data-toast="详情">详情</button></div></td>
+            </tr>
+            <tr>
+              <td class="tt-name">#YX0615-2980</td>
+              <td><div class="tt-name">德国中心·技术部</div><div class="tt-sub">周一周菜单</div></td>
+              <td>轻食鸡胸沙拉 ×8</td><td><span class="badge badge-brand">周菜单</span></td>
+              <td class="tt-name">¥152.00</td><td class="tt-sub">06-15 12:01</td>
+              <td><span class="pill pill-green">已完成</span></td>
+              <td><div class="row gap6"><button class="abtn abtn-sm abtn-ghost" data-toast="详情">详情</button></div></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row between center" style="padding:14px 20px;border-top:1px solid var(--hairline);">
+          <span class="tt-sub">共 3,128 条</span>
+          <div class="row gap6"><button class="abtn abtn-sm abtn-ghost">‹</button><button class="abtn abtn-sm abtn-primary">1</button><button class="abtn abtn-sm abtn-ghost" data-toast="第2页">2</button><button class="abtn abtn-sm abtn-ghost" data-toast="第3页">3</button><button class="abtn abtn-sm abtn-ghost" data-toast="下一页">›</button></div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="../assets/admin.js"></script>
+</body>
+</html>

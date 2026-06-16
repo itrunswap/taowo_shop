@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>云鲜 YUNXIAN · 高保真原型总览</title>
+<link rel="stylesheet" href="assets/design-system.css">
+<style>
+  body{ color:var(--ink); }
+  .wrap{ max-width:1200px; margin:0 auto; padding:0 24px; }
+
+  /* top nav */
+  .hnav{ position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(20px); background:rgba(251,248,245,.8); border-bottom:1px solid var(--hairline); }
+  .hnav .wrap{ display:flex; align-items:center; gap:20px; height:62px; }
+  .hnav .logo{ width:34px; height:34px; border-radius:10px; background:var(--brand-grad); display:grid; place-items:center; color:#fff; font-weight:800; box-shadow:var(--sh-brand); }
+  .hnav .nm{ font-weight:800; font-size:16px; letter-spacing:-.02em; }
+  .hnav .links{ display:flex; gap:6px; margin-left:auto; }
+  .hnav .links a{ padding:8px 14px; border-radius:99px; font-size:13.5px; font-weight:600; color:var(--ink-2); }
+  .hnav .links a:hover{ background:var(--surface); color:var(--ink); }
+
+  /* hero */
+  .hero{ padding:72px 0 48px; text-align:center; }
+  .hero .badge-line2{ display:inline-flex; gap:8px; align-items:center; background:var(--surface); padding:7px 14px; border-radius:99px; box-shadow:var(--sh-1); font-size:13px; font-weight:600; color:var(--ink-2); }
+  .hero h1{ font-size:60px; font-weight:850; letter-spacing:-.04em; line-height:1.05; margin-top:24px; }
+  .hero h1 .grad{ background:var(--brand-grad); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .hero p{ font-size:18px; color:var(--ink-2); max-width:640px; margin:20px auto 0; line-height:1.6; }
+  .hero .cta{ display:flex; gap:12px; justify-content:center; margin-top:32px; flex-wrap:wrap; }
+
+  .stats{ display:flex; gap:40px; justify-content:center; margin-top:48px; flex-wrap:wrap; }
+  .stats .st .v{ font-size:34px; font-weight:850; letter-spacing:-.03em; }
+  .stats .st .l{ font-size:13px; color:var(--ink-3); margin-top:2px; }
+
+  .section{ padding:56px 0; }
+  .sec-head{ text-align:center; margin-bottom:40px; }
+  .sec-head .k{ font-size:13px; font-weight:700; color:var(--brand); letter-spacing:.08em; text-transform:uppercase; }
+  .sec-head h2{ font-size:38px; font-weight:850; letter-spacing:-.03em; margin-top:10px; }
+  .sec-head p{ font-size:16px; color:var(--ink-2); margin-top:12px; max-width:600px; margin-left:auto; margin-right:auto; }
+
+  /* phones */
+  .phones{ display:flex; gap:30px; justify-content:center; flex-wrap:wrap; }
+  .phone{ width:300px; }
+  .phone .bezel{ background:#1d1d1f; border-radius:42px; padding:9px; box-shadow:0 30px 60px rgba(40,28,20,.28); }
+  .phone iframe{ width:282px; height:600px; border:none; border-radius:34px; background:#fff; display:block; }
+  .phone .cap{ text-align:center; margin-top:16px; font-weight:700; font-size:15px; }
+  .phone .cap span{ display:block; font-size:12.5px; color:var(--ink-3); font-weight:500; margin-top:2px; }
+
+  /* directory grid */
+  .dir{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  @media (max-width:900px){ .dir{ grid-template-columns:repeat(2,1fr);} }
+  .dcard{ background:var(--surface); border-radius:16px; padding:16px; box-shadow:var(--sh-1); display:flex; align-items:center; gap:12px; transition:transform .15s, box-shadow .2s; border:1px solid var(--hairline-2); }
+  .dcard:hover{ transform:translateY(-3px); box-shadow:var(--sh-2); }
+  .dcard .ic{ width:42px; height:42px; border-radius:12px; display:grid; place-items:center; font-size:21px; flex:none; }
+  .dcard .t{ font-weight:700; font-size:14px; }
+  .dcard .s{ font-size:12px; color:var(--ink-3); margin-top:1px; }
+  .grouplabel{ grid-column:1/-1; font-size:13px; font-weight:700; color:var(--ink-3); margin:18px 0 2px; letter-spacing:.02em; }
+
+  /* admin browser frame */
+  .browser{ border-radius:18px; overflow:hidden; box-shadow:var(--sh-3); border:1px solid var(--hairline); background:#fff; }
+  .browser .bar{ height:44px; background:#F4F2EF; border-bottom:1px solid var(--hairline); display:flex; align-items:center; gap:8px; padding:0 16px; }
+  .browser .bar .tl{ display:flex; gap:7px; }
+  .browser .bar .tl i{ width:12px; height:12px; border-radius:50%; } .tl i:nth-child(1){background:#FF5F57}.tl i:nth-child(2){background:#FEBC2E}.tl i:nth-child(3){background:#28C840}
+  .browser .bar .url{ flex:1; max-width:360px; margin:0 auto; height:26px; background:#fff; border-radius:8px; border:1px solid var(--hairline); display:flex; align-items:center; justify-content:center; font-size:12px; color:var(--ink-3); }
+  .browser iframe{ width:100%; height:600px; border:none; display:block; }
+
+  /* palette */
+  .palette{ display:flex; gap:16px; flex-wrap:wrap; justify-content:center; }
+  .sw{ text-align:center; }
+  .sw .chip2{ width:88px; height:88px; border-radius:20px; box-shadow:var(--sh-2); }
+  .sw .nm{ font-weight:700; font-size:13px; margin-top:10px; }
+  .sw .hex{ font-size:12px; color:var(--ink-3); font-family:ui-monospace,monospace; }
+
+  .principles{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:36px; }
+  @media (max-width:900px){ .principles{ grid-template-columns:1fr;} }
+  .pcard{ background:var(--surface); border-radius:18px; padding:24px; box-shadow:var(--sh-1); }
+  .pcard .e{ font-size:30px; } .pcard h3{ font-size:17px; font-weight:750; margin-top:12px; } .pcard p{ font-size:14px; color:var(--ink-2); margin-top:8px; line-height:1.6; }
+
+  footer{ text-align:center; padding:48px 0 64px; color:var(--ink-3); font-size:13px; }
+
+  .biz{ background:var(--surface); border-radius:24px; padding:36px; box-shadow:var(--sh-1); display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  @media (max-width:900px){ .biz{ grid-template-columns:1fr;} }
+  .biz .f{ display:flex; gap:12px; }
+  .biz .f .e{ font-size:24px; flex:none; }
+  .biz .f .t{ font-weight:700; font-size:14.5px; } .biz .f .d{ font-size:13px; color:var(--ink-2); margin-top:3px; line-height:1.5; }
+</style>
+</head>
+<body>
+
+<!-- top nav -->
+<div class="hnav">
+  <div class="wrap">
+    <div class="logo">鲜</div>
+    <div><div class="nm">云鲜 YUNXIAN</div></div>
+    <div class="links">
+      <a href="#biz">业务解析</a>
+      <a href="#mp">小程序端</a>
+      <a href="#admin">管理后台</a>
+      <a href="#design">设计语言</a>
+      <a href="#dir">全部页面</a>
+    </div>
+  </div>
+</div>
+
+<!-- hero -->
+<section class="hero wrap">
+  <div class="badge-line2">🍱 智慧团餐 · 社区生鲜 · 综合 O2O 平台</div>
+  <h1>云鲜 <span class="grad">YUNXIAN</span><br>高保真交互原型</h1>
+  <p>基于客户截图深度还原并重构的一整套产品原型 —— 覆盖<b>小程序消费端</b>与<b>Web 运营后台</b>双端，鲜食暖色 · Apple 级视觉语言，所有页面均可点击跳转、真实交互。</p>
+  <div class="cta">
+    <a class="btn btn-primary" href="mp/home.html" target="_blank" style="height:52px;padding:0 28px;">📱 体验小程序端</a>
+    <a class="btn btn-dark" href="admin/login.html" target="_blank" style="height:52px;padding:0 28px;">🖥 进入运营后台</a>
+  </div>
+  <div class="stats">
+    <div class="st"><div class="v">34</div><div class="l">高保真页面</div></div>
+    <div class="st"><div class="v">2</div><div class="l">完整终端</div></div>
+    <div class="st"><div class="v">5</div><div class="l">业务频道</div></div>
+    <div class="st"><div class="v">6</div><div class="l">核心业务流</div></div>
+  </div>
+</section>
+
+<!-- business analysis -->
+<section class="section wrap" id="biz">
+  <div class="sec-head"><div class="k">Business Analysis</div><h2>从截图反推的完整业务</h2><p>需求文档为空，以下业务模型由三张界面截图深度推导、补全并结构化设计。</p></div>
+  <div class="biz">
+    <div class="f"><span class="e">🍱</span><div><div class="t">按日期订餐的食堂模式</div><div class="d">123新食堂以「日期 × 分类 × 菜系」预订制供餐，区别于即时外卖，支撑团餐预排。</div></div></div>
+    <div class="f"><span class="e">💳</span><div><div class="t">双价格体系</div><div class="d">会员价 + 团餐价并行，企业认证客户解锁更低团餐价，驱动 B 端签约。</div></div></div>
+    <div class="f"><span class="e">💞</span><div><div class="t">菜单社交裂变</div><div class="d">收藏菜单 / 前10榜单 / 分享菜单 + 已分享次数，靠分享与拼团降价复购。</div></div></div>
+    <div class="f"><span class="e">📅</span><div><div class="t">周菜单 + 智能定制</div><div class="d">我的周菜单按工作日自动续订，菜单定制按口味/忌口/预算 AI 排餐。</div></div></div>
+    <div class="f"><span class="e">🪙</span><div><div class="t">会员 + 鲜币体系</div><div class="d">黄金/铂金会员权益 + 平台代币「鲜币」充值消费、积分奖励。</div></div></div>
+    <div class="f"><span class="e">🧑‍🍳</span><div><div class="t">管家服务 + 加盟</div><div class="d">膳食管家一对一服务企业，并开放管家加盟形成渠道与分佣体系。</div></div></div>
+  </div>
+</section>
+
+<!-- mini-program -->
+<section class="section" id="mp" style="background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.5));">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">Mini-Program · C 端</div><h2>小程序消费端</h2><p>下方为真机可交互预览 —— 直接在手机框内点击操作，完整体验下单闭环。</p></div>
+    <div class="phones">
+      <div class="phone"><div class="bezel"><iframe src="mp/home.html" title="首页" loading="lazy"></iframe></div><div class="cap">云鲜超 · 首页<span>多频道超级 App</span></div></div>
+      <div class="phone"><div class="bezel"><iframe src="mp/canteen.html" title="食堂" loading="lazy"></iframe></div><div class="cap">123新食堂<span>按日期订餐</span></div></div>
+      <div class="phone"><div class="bezel"><iframe src="mp/wish.html" title="我想吃" loading="lazy"></iframe></div><div class="cap">我想吃<span>菜单社交体系</span></div></div>
+    </div>
+    <div class="txt-c" style="margin-top:36px;"><a class="btn btn-soft" href="mp/home.html" target="_blank" style="display:inline-flex;">在新窗口全屏体验 →</a></div>
+  </div>
+</section>
+
+<!-- admin -->
+<section class="section wrap" id="admin">
+  <div class="sec-head"><div class="k">Web Console · B 端</div><h2>Web 运营管理后台</h2><p>菜单排期、订单履约、会员增长、管家加盟统一管理，与小程序形成 B+C 闭环。</p></div>
+  <div class="browser">
+    <div class="bar"><div class="tl"><i></i><i></i><i></i></div><div class="url">console.yunxian.com / dashboard</div></div>
+    <iframe src="admin/dashboard.html" title="运营后台" loading="lazy"></iframe>
+  </div>
+  <div class="txt-c" style="margin-top:28px;"><a class="btn btn-dark" href="admin/login.html" target="_blank" style="display:inline-flex;">进入后台全屏体验 →</a></div>
+</section>
+
+<!-- design language -->
+<section class="section" id="design" style="background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,0));">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">Design Language</div><h2>鲜食暖色 · 设计语言</h2><p>将原型的高饱和大红，重构为温暖、有食欲、克制高级的餐饮视觉体系。</p></div>
+    <div class="palette">
+      <div class="sw"><div class="chip2" style="background:#FF5A4D"></div><div class="nm">珊瑚红 / 主色</div><div class="hex">#FF5A4D</div></div>
+      <div class="sw"><div class="chip2" style="background:#1D1D1F"></div><div class="nm">墨黑 / 文字</div><div class="hex">#1D1D1F</div></div>
+      <div class="sw"><div class="chip2" style="background:#FBF8F5;border:1px solid var(--hairline)"></div><div class="nm">暖白 / 底色</div><div class="hex">#FBF8F5</div></div>
+      <div class="sw"><div class="chip2" style="background:#F5A623"></div><div class="nm">暖橙 / 点缀</div><div class="hex">#F5A623</div></div>
+      <div class="sw"><div class="chip2" style="background:#2BB673"></div><div class="nm">鲜绿 / 成功</div><div class="hex">#2BB673</div></div>
+    </div>
+    <div class="principles">
+      <div class="pcard"><div class="e">🍽️</div><h3>食物为主角</h3><p>大图大留白，让菜品本身成为视觉焦点，标签信息克制分层，不喧宾夺主。</p></div>
+      <div class="pcard"><div class="e">✨</div><h3>克制的层次</h3><p>柔和多层阴影、发丝级描边、22–28px 圆角，营造高级餐厅菜单般的精致触感。</p></div>
+      <div class="pcard"><div class="e">👆</div><h3>真实可交互</h3><p>购物车实时联动、步进器、底部弹层、Toast 反馈，原型即体验，所见即所得。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- full directory -->
+<section class="section wrap" id="dir">
+  <div class="sec-head"><div class="k">Site Map</div><h2>全部页面索引</h2><p>共 34 个高保真页面，点击任意卡片在新窗口打开。</p></div>
+  <div class="dir">
+    <div class="grouplabel">📱 小程序 · 核心交易闭环</div>
+    <a class="dcard" href="mp/home.html" target="_blank"><div class="ic g-rose">🏠</div><div><div class="t">云鲜超首页</div><div class="s">多频道入口</div></div></a>
+    <a class="dcard" href="mp/canteen.html" target="_blank"><div class="ic g-warm">📅</div><div><div class="t">123新食堂</div><div class="s">按日期订餐</div></div></a>
+    <a class="dcard" href="mp/product.html" target="_blank"><div class="ic g-rose">🍱</div><div><div class="t">套餐详情</div><div class="s">荤素配置·评价</div></div></a>
+    <a class="dcard" href="mp/cart.html" target="_blank"><div class="ic g-gold">🛒</div><div><div class="t">购物车</div><div class="s">实时联动</div></div></a>
+    <a class="dcard" href="mp/checkout.html" target="_blank"><div class="ic g-green">🧾</div><div><div class="t">确认订单</div><div class="s">结算·支付</div></div></a>
+    <a class="dcard" href="mp/pay-success.html" target="_blank"><div class="ic g-green">✅</div><div><div class="t">支付成功</div><div class="s">积分奖励</div></div></a>
+    <a class="dcard" href="mp/orders.html" target="_blank"><div class="ic g-cream">📋</div><div><div class="t">我的订单</div><div class="s">订单列表</div></div></a>
+    <a class="dcard" href="mp/order-detail.html" target="_blank"><div class="ic g-warm">🚚</div><div><div class="t">订单详情</div><div class="s">履约进度</div></div></a>
+
+    <div class="grouplabel">📱 小程序 · 菜单体系</div>
+    <a class="dcard" href="mp/wish.html" target="_blank"><div class="ic g-rose">💞</div><div><div class="t">我想吃</div><div class="s">收藏/榜单/分享</div></div></a>
+    <a class="dcard" href="mp/weekly.html" target="_blank"><div class="ic g-warm">📆</div><div><div class="t">我的周菜单</div><div class="s">自动续订</div></div></a>
+    <a class="dcard" href="mp/custom.html" target="_blank"><div class="ic g-purple">🪄</div><div><div class="t">菜单定制</div><div class="s">AI 智能排餐</div></div></a>
+    <a class="dcard" href="mp/category.html" target="_blank"><div class="ic g-green">🥬</div><div><div class="t">生鲜分类</div><div class="s">云鲜超商品</div></div></a>
+
+    <div class="grouplabel">📱 小程序 · 服务 / 频道 / 个人</div>
+    <a class="dcard" href="mp/pinhaofan.html" target="_blank"><div class="ic g-warm">🤝</div><div><div class="t">拼好饭</div><div class="s">拼团省钱</div></div></a>
+    <a class="dcard" href="mp/member.html" target="_blank"><div class="ic g-gold">👑</div><div><div class="t">会员中心</div><div class="s">权益·续费</div></div></a>
+    <a class="dcard" href="mp/coins.html" target="_blank"><div class="ic g-gold">🪙</div><div><div class="t">买鲜币</div><div class="s">充值·明细</div></div></a>
+    <a class="dcard" href="mp/butler.html" target="_blank"><div class="ic g-rose">🧑‍🍳</div><div><div class="t">找管家</div><div class="s">膳食管家</div></div></a>
+    <a class="dcard" href="mp/franchise.html" target="_blank"><div class="ic g-cream">🏪</div><div><div class="t">管家加盟</div><div class="s">招募合伙人</div></div></a>
+    <a class="dcard" href="mp/local.html" target="_blank"><div class="ic g-gold">📍</div><div><div class="t">本地生活</div><div class="s">到店团购</div></div></a>
+    <a class="dcard" href="mp/channel-mao.html" target="_blank"><div class="ic g-purple">🐱</div><div><div class="t">猫一筒</div><div class="s">进口精选</div></div></a>
+    <a class="dcard" href="mp/channel-kadi.html" target="_blank"><div class="ic g-cream">☕</div><div><div class="t">卡蒂望</div><div class="s">精品咖啡</div></div></a>
+    <a class="dcard" href="mp/profile.html" target="_blank"><div class="ic g-rose">👤</div><div><div class="t">我的</div><div class="s">个人中心</div></div></a>
+    <a class="dcard" href="mp/search.html" target="_blank"><div class="ic g-cool">🔍</div><div><div class="t">搜索</div><div class="s">历史·热门</div></div></a>
+
+    <div class="grouplabel">🖥 Web 运营后台</div>
+    <a class="dcard" href="admin/login.html" target="_blank"><div class="ic g-rose">🔐</div><div><div class="t">登录</div><div class="s">工作台入口</div></div></a>
+    <a class="dcard" href="admin/dashboard.html" target="_blank"><div class="ic g-warm">📊</div><div><div class="t">数据看板</div><div class="s">运营概览</div></div></a>
+    <a class="dcard" href="admin/menu-schedule.html" target="_blank"><div class="ic g-gold">🗓️</div><div><div class="t">周菜单排期</div><div class="s">供餐矩阵</div></div></a>
+    <a class="dcard" href="admin/products.html" target="_blank"><div class="ic g-green">🍔</div><div><div class="t">商品/套餐</div><div class="s">商品库</div></div></a>
+    <a class="dcard" href="admin/product-edit.html" target="_blank"><div class="ic g-rose">✏️</div><div><div class="t">套餐编辑</div><div class="s">配置+预览</div></div></a>
+    <a class="dcard" href="admin/orders.html" target="_blank"><div class="ic g-cream">📦</div><div><div class="t">订单管理</div><div class="s">履约处理</div></div></a>
+    <a class="dcard" href="admin/members.html" target="_blank"><div class="ic g-gold">🧑‍🤝‍🧑</div><div><div class="t">会员管理</div><div class="s">等级·鲜币</div></div></a>
+    <a class="dcard" href="admin/marketing.html" target="_blank"><div class="ic g-warm">📣</div><div><div class="t">营销活动</div><div class="s">拼团·券</div></div></a>
+    <a class="dcard" href="admin/enterprise.html" target="_blank"><div class="ic g-cool">🏢</div><div><div class="t">团餐企业</div><div class="s">B端客户</div></div></a>
+    <a class="dcard" href="admin/franchise.html" target="_blank"><div class="ic g-rose">🧑‍🍳</div><div><div class="t">管家与加盟</div><div class="s">审核·管理</div></div></a>
+    <a class="dcard" href="admin/analytics.html" target="_blank"><div class="ic g-purple">📈</div><div><div class="t">数据报表</div><div class="s">经营分析</div></div></a>
+    <a class="dcard" href="admin/settings.html" target="_blank"><div class="ic g-green">⚙️</div><div><div class="t">系统设置</div><div class="s">门店·配送</div></div></a>
+  </div>
+</section>
+
+<footer>
+  云鲜 YUNXIAN · 高保真交互原型 · 2026 &nbsp;|&nbsp; 鲜食暖色设计语言 · 小程序端 + Web 管理后台<br>
+  <span style="opacity:.7">提示：建议用 Chrome / Edge 打开本页；手机框内可直接点击操作。</span>
+</footer>
+
+</body>
+</html>

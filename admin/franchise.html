@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>管家与加盟 · 云鲜运营台</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/admin.css">
+</head>
+<body data-page="franchise">
+<div class="admin">
+  <aside class="sidebar" id="side"></aside>
+  <div class="main">
+    <header class="topbar">
+      <div><div class="crumb">渠道拓展</div><div class="ptitle">管家与加盟</div></div>
+      <div class="tsearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4" stroke-linecap="round"/></svg>搜索管家 / 申请人</div>
+      <button class="ticon" data-toast="加盟政策设置"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1.2l2-1.6-2-3.4-2.4 1a7 7 0 0 0-2-1.2l-.4-2.6h-4l-.4 2.6a7 7 0 0 0-2 1.2l-2.4-1-2 3.4 2 1.6A7 7 0 0 0 5 12a7 7 0 0 0 .1 1.2l-2 1.6 2 3.4 2.4-1a7 7 0 0 0 2 1.2l.4 2.6h4l.4-2.6a7 7 0 0 0 2-1.2l2.4 1 2-3.4-2-1.6z"/></svg></button>
+    </header>
+
+    <main class="content">
+      <div class="page-title" style="margin-bottom:18px;">管家与加盟</div>
+      <div class="grid g-4" style="margin-bottom:18px;">
+        <div class="stat"><div class="s-top"><div class="s-ic tint-brand">🧑‍🍳</div></div><div class="s-label">在职管家</div><div class="s-value">320</div><div class="s-delta up">▲ 18 本月</div></div>
+        <div class="stat"><div class="s-top"><div class="s-ic tint-gold">📋</div></div><div class="s-label">待审核申请</div><div class="s-value" style="color:var(--brand)">8</div></div>
+        <div class="stat"><div class="s-top"><div class="s-ic tint-green">📈</div></div><div class="s-label">管家月创收</div><div class="s-value">¥86万</div></div>
+        <div class="stat"><div class="s-top"><div class="s-ic tint-blue">⭐</div></div><div class="s-label">平均评分</div><div class="s-value">4.92</div></div>
+      </div>
+
+      <!-- pending applications -->
+      <div class="panel" style="margin-bottom:18px;">
+        <div class="panel-head"><div class="ph-t">加盟申请审核</div><span class="badge badge-brand">8 待处理</span><div class="ph-s" style="margin-left:auto;">来自小程序「管家加盟」</div></div>
+        <table class="table">
+          <thead><tr><th>申请人</th><th>联系方式</th><th>意向区域</th><th>加盟类型</th><th>提交时间</th><th>操作</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="row center gap10"><div class="avatar" style="width:34px;height:34px;font-size:13px;">刘</div><div class="tt-name">刘强</div></div></td>
+              <td class="tt-sub">139****2231</td><td>上海 · 浦东</td><td><span class="badge badge-brand">区域合伙</span></td><td class="tt-sub">10 分钟前</td>
+              <td><div class="row gap6"><button class="abtn abtn-sm abtn-primary" data-toast="已通过 · 进入培训流程">通过</button><button class="abtn abtn-sm abtn-line" data-toast="已驳回">驳回</button></div></td>
+            </tr>
+            <tr>
+              <td><div class="row center gap10"><div class="avatar" style="width:34px;height:34px;font-size:13px;background:var(--gold-grad);">何</div><div class="tt-name">何静</div></div></td>
+              <td class="tt-sub">158****7745</td><td>上海 · 徐汇</td><td><span class="badge badge-green">全职</span></td><td class="tt-sub">1 小时前</td>
+              <td><div class="row gap6"><button class="abtn abtn-sm abtn-primary" data-toast="已通过 · 进入培训流程">通过</button><button class="abtn abtn-sm abtn-line" data-toast="已驳回">驳回</button></div></td>
+            </tr>
+            <tr>
+              <td><div class="row center gap10"><div class="avatar" style="width:34px;height:34px;font-size:13px;background:var(--green);">郑</div><div class="tt-name">郑昊</div></div></td>
+              <td class="tt-sub">137****0098</td><td>上海 · 闵行</td><td><span class="badge badge-ink">兼职</span></td><td class="tt-sub">3 小时前</td>
+              <td><div class="row gap6"><button class="abtn abtn-sm abtn-primary" data-toast="已通过 · 进入培训流程">通过</button><button class="abtn abtn-sm abtn-line" data-toast="已驳回">驳回</button></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- active butlers -->
+      <div class="panel">
+        <div class="panel-head"><div class="ph-t">在职管家</div><div class="ph-s" style="margin-left:auto;">按本月创收排序</div></div>
+        <table class="table">
+          <thead><tr><th>管家</th><th>区域</th><th>服务企业</th><th>本月分佣</th><th>评分</th><th>状态</th><th>操作</th></tr></thead>
+          <tbody>
+            <tr><td><div class="row center gap10"><div class="avatar" style="width:34px;height:34px;font-size:13px;">张</div><div><div class="tt-name">张敏</div><div class="tt-sub">五星管家</div></div></div></td><td>浦东·张江</td><td>42 家</td><td class="tt-name">¥28,600</td><td><span class="pill pill-gold">★ 4.98</span></td><td><span class="pill pill-green">在职</span></td><td><button class="abtn abtn-sm abtn-line" data-toast="管家档案">详情</button></td></tr>
+            <tr><td><div class="row center gap10"><div class="avatar" style="width:34px;height:34px;font-size:13px;background:var(--green)">周</div><div><div class="tt-name">周磊</div><div class="tt-sub">金牌管家</div></div></div></td><td>徐汇·漕河泾</td><td>36 家</td><td class="tt-name">¥24,100</td><td><span class="pill pill-gold">★ 4.95</span></td><td><span class="pill pill-green">在职</span></td><td><button class="abtn abtn-sm abtn-line" data-toast="管家档案">详情</button></td></tr>
+            <tr><td><div class="row center gap10"><div class="avatar" style="width:34px;height:34px;font-size:13px;background:var(--gold-grad)">李</div><div><div class="tt-name">李娜</div><div class="tt-sub">金牌管家</div></div></div></td><td>闵行·莘庄</td><td>30 家</td><td class="tt-name">¥19,800</td><td><span class="pill pill-gold">★ 4.91</span></td><td><span class="pill pill-green">在职</span></td><td><button class="abtn abtn-sm abtn-line" data-toast="管家档案">详情</button></td></tr>
+            <tr><td><div class="row center gap10"><div class="avatar" style="width:34px;height:34px;font-size:13px;background:var(--ink-3)">吴</div><div><div class="tt-name">吴迪</div><div class="tt-sub">新晋管家</div></div></div></td><td>杨浦·五角场</td><td>12 家</td><td class="tt-name">¥7,400</td><td><span class="pill pill-gray">★ 4.80</span></td><td><span class="pill pill-blue">培训中</span></td><td><button class="abtn abtn-sm abtn-line" data-toast="管家档案">详情</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="../assets/admin.js"></script>
+</body>
+</html>

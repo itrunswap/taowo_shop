@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>拼好饭</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+</head>
+<body>
+<div class="screen">
+  <div class="brand-hero" style="flex:none;">
+    <div class="statusbar on-brand"><span data-clock>9:41</span>
+      <span class="sb-right">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9h3v6H2zM7 6h3v9H7zM12 3h3v12h-3zM17 7h3v8h-3z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/></svg>
+        <svg viewBox="0 0 26 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="18" height="10" rx="3"/><rect x="4" y="9" width="13" height="6" rx="1.5" fill="currentColor" stroke="none"/></svg>
+      </span>
+    </div>
+    <div class="navbar on-brand"><button class="nav-btn" data-go="home.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="nav-title">拼好饭</span></div>
+    <div class="page-pad" style="padding-bottom:22px;color:#fff;">
+      <div class="t-largetitle" style="color:#fff;">人越多 · 越便宜</div>
+      <div class="t-sub mt6" style="color:rgba(255,255,255,.9);">和同事拼单，每单立省 ¥3 起，满 3 人再减</div>
+    </div>
+  </div>
+
+  <div class="page has-cta">
+    <!-- steps -->
+    <div class="page-pad" style="margin-top:-12px;">
+      <div class="card card-pad row between" style="text-align:center;">
+        <div class="col center flex1"><div style="font-size:26px;">🍱</div><div class="t-cap mt4" style="color:var(--ink);font-weight:600;">选套餐</div></div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink-4)" stroke-width="2" style="align-self:center;"><path d="M9 6l6 6-6 6" stroke-linecap="round"/></svg>
+        <div class="col center flex1"><div style="font-size:26px;">👬</div><div class="t-cap mt4" style="color:var(--ink);font-weight:600;">发起拼</div></div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink-4)" stroke-width="2" style="align-self:center;"><path d="M9 6l6 6-6 6" stroke-linecap="round"/></svg>
+        <div class="col center flex1"><div style="font-size:26px;">🎉</div><div class="t-cap mt4" style="color:var(--ink);font-weight:600;">成团省</div></div>
+      </div>
+    </div>
+
+    <!-- ongoing groups -->
+    <div class="page-pad">
+      <div class="section-head"><span class="t-h2">正在拼的团</span><span class="badge badge-brand">12 个进行中</span></div>
+      <div class="col gap14">
+        <div class="card card-pad">
+          <div class="row center gap12">
+            <div class="media g-warm" style="width:64px;height:64px;flex:none;"><span style="font-size:32px;">🍗</span></div>
+            <div class="flex1">
+              <div class="t-h3" style="font-size:15px;">麻油鸡套餐 · 3人团</div>
+              <div class="row center gap6 mt6">
+                <div class="row" style="margin-right:4px;"><span class="avatar" style="width:24px;height:24px;font-size:11px;">陈</span><span class="avatar" style="width:24px;height:24px;font-size:11px;margin-left:-8px;background:var(--gold-grad);">林</span></div>
+                <span class="t-cap">还差 <b class="t-brand">1</b> 人成团</span>
+              </div>
+            </div>
+            <div class="col" style="align-items:flex-end;">
+              <div class="price t-brand" style="font-size:20px;"><span class="cur">¥</span>24</div>
+              <div class="badge badge-ink" style="background:var(--brand-soft);color:var(--brand);">⏱ 02:14:08</div>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block btn-sm mt12" data-toast="已参团 · 等待成团" style="height:42px;">立即参团 · 省 ¥4</button>
+        </div>
+
+        <div class="card card-pad">
+          <div class="row center gap12">
+            <div class="media g-cream" style="width:64px;height:64px;flex:none;"><span style="font-size:32px;">🍲</span></div>
+            <div class="flex1">
+              <div class="t-h3" style="font-size:15px;">回锅肉套餐 · 5人团</div>
+              <div class="row center gap6 mt6">
+                <div class="row" style="margin-right:4px;"><span class="avatar" style="width:24px;height:24px;font-size:11px;">王</span><span class="avatar" style="width:24px;height:24px;font-size:11px;margin-left:-8px;background:var(--gold-grad);">赵</span><span class="avatar" style="width:24px;height:24px;font-size:11px;margin-left:-8px;background:var(--green);">孙</span></div>
+                <span class="t-cap">还差 <b class="t-brand">2</b> 人成团</span>
+              </div>
+            </div>
+            <div class="col" style="align-items:flex-end;">
+              <div class="price t-brand" style="font-size:20px;"><span class="cur">¥</span>22</div>
+              <div class="badge badge-ink" style="background:var(--brand-soft);color:var(--brand);">⏱ 00:48:30</div>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block btn-sm mt12" data-toast="已参团 · 等待成团" style="height:42px;">立即参团 · 省 ¥5</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- rules -->
+    <div class="page-pad mt8">
+      <div class="card card-pad" style="background:var(--surface-2);box-shadow:none;">
+        <div class="t-h3 mb8">玩法说明</div>
+        <div class="t-sub" style="line-height:1.8;">· 发起或参与拼团，达到人数即成团<br>· 成团后统一配送，未成团自动退款<br>· 团长额外获得 5 鲜币奖励</div>
+      </div>
+    </div>
+    <div class="page-bottom"></div>
+  </div>
+
+  <div class="ctabar">
+    <button class="btn btn-line flex1" data-go="orders.html">我的拼团</button>
+    <button class="btn btn-primary flex1" data-go="canteen.html">发起新拼团</button>
+  </div>
+  <div class="home-indicator"></div>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

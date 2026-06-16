@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>商品 / 套餐 · 云鲜运营台</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/admin.css">
+</head>
+<body data-page="products">
+<div class="admin">
+  <aside class="sidebar" id="side"></aside>
+  <div class="main">
+    <header class="topbar">
+      <div><div class="crumb">餐饮运营</div><div class="ptitle">商品 / 套餐</div></div>
+      <div class="tsearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4" stroke-linecap="round"/></svg>搜索商品名 / 编码</div>
+      <button class="ticon" data-toast="筛选"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h18l-7 8v6l-4 2v-8z" stroke-linejoin="round"/></svg></button>
+    </header>
+
+    <main class="content">
+      <div class="row between center" style="margin-bottom:18px;">
+        <div><div class="page-title">商品 / 套餐管理</div><div class="page-desc">共 186 个商品 · 156 个在售 · 30 个已下架</div></div>
+        <div class="row gap10">
+          <button class="abtn abtn-line" data-toast="批量导入模板已下载"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" stroke-linecap="round" stroke-linejoin="round"/></svg>批量导入</button>
+          <button class="abtn abtn-primary" data-go="product-edit.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>新建套餐</button>
+        </div>
+      </div>
+
+      <!-- filter -->
+      <div class="panel" style="margin-bottom:18px;">
+        <div class="panel-body row center gap16" style="padding:14px 20px;">
+          <div class="atabs" style="border:none;gap:20px;">
+            <div class="at active" data-tab>全部</div>
+            <div class="at" data-tab data-toast-on="套餐">套餐</div>
+            <div class="at" data-tab data-toast-on="单点">单点</div>
+            <div class="at" data-tab data-toast-on="午茶">午茶</div>
+            <div class="at" data-tab data-toast-on="零食">零食</div>
+            <div class="at" data-tab data-toast-on="生鲜">生鲜</div>
+          </div>
+          <div class="row gap10" style="margin-left:auto;">
+            <select class="select" style="width:140px;height:38px;"><option>全部状态</option><option>在售</option><option>已下架</option><option>已售罄</option></select>
+            <select class="select" style="width:140px;height:38px;"><option>销量从高到低</option><option>价格从高到低</option><option>最近上架</option></select>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <table class="table">
+          <thead><tr>
+            <th style="width:34px;"><input type="checkbox" style="width:16px;height:16px;accent-color:var(--brand);"></th>
+            <th>商品</th><th>分类</th><th>会员价 / 团餐价</th><th>月销量</th><th>本周排期</th><th>状态</th><th>操作</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" style="width:16px;height:16px;accent-color:var(--brand);"></td>
+              <td><div class="row center gap12"><div class="mini-media g-rose">🍱</div><div><div class="tt-name">晶香什锦套餐</div><div class="tt-sub">SP10086 · 2荤1素1主食</div></div></div></td>
+              <td><span class="badge badge-brand">套餐</span></td>
+              <td><div class="tt-name">¥21.00</div><div class="tt-sub">团餐 ¥18.00</div></td>
+              <td class="tt-name">2,386</td>
+              <td><span class="pill pill-green">5 天</span></td>
+              <td><div class="switch on" title="在售"><i></i></div></td>
+              <td><div class="row gap8"><button class="abtn abtn-sm abtn-line" data-go="product-edit.html">编辑</button><button class="abtn abtn-sm abtn-ghost" data-toast="已复制">复制</button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" style="width:16px;height:16px;accent-color:var(--brand);"></td>
+              <td><div class="row center gap12"><div class="mini-media g-warm">🍗</div><div><div class="tt-name">麻油鸡套餐</div><div class="tt-sub">SP10087 · 大师监制</div></div></div></td>
+              <td><span class="badge badge-brand">套餐</span></td>
+              <td><div class="tt-name">¥28.00</div><div class="tt-sub">团餐 ¥24.00</div></td>
+              <td class="tt-name">2,298</td>
+              <td><span class="pill pill-gold">3 天</span></td>
+              <td><div class="switch on"><i></i></div></td>
+              <td><div class="row gap8"><button class="abtn abtn-sm abtn-line" data-go="product-edit.html">编辑</button><button class="abtn abtn-sm abtn-ghost" data-toast="已复制">复制</button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" style="width:16px;height:16px;accent-color:var(--brand);"></td>
+              <td><div class="row center gap12"><div class="mini-media g-cream">🍲</div><div><div class="tt-name">回锅肉套餐</div><div class="tt-sub">SP10088 · 川味经典</div></div></div></td>
+              <td><span class="badge badge-brand">套餐</span></td>
+              <td><div class="tt-name">¥27.00</div><div class="tt-sub">团餐 ¥24.00</div></td>
+              <td class="tt-name">1,941</td>
+              <td><span class="pill pill-green">5 天</span></td>
+              <td><div class="switch on"><i></i></div></td>
+              <td><div class="row gap8"><button class="abtn abtn-sm abtn-line" data-go="product-edit.html">编辑</button><button class="abtn abtn-sm abtn-ghost" data-toast="已复制">复制</button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" style="width:16px;height:16px;accent-color:var(--brand);"></td>
+              <td><div class="row center gap12"><div class="mini-media g-green">🥗</div><div><div class="tt-name">轻食鸡胸沙拉</div><div class="tt-sub">SP10090 · 低卡健身</div></div></div></td>
+              <td><span class="badge badge-green">单点</span></td>
+              <td><div class="tt-name">¥19.00</div><div class="tt-sub">团餐 —</div></td>
+              <td class="tt-name">1,180</td>
+              <td><span class="pill pill-green">5 天</span></td>
+              <td><div class="switch on"><i></i></div></td>
+              <td><div class="row gap8"><button class="abtn abtn-sm abtn-line" data-go="product-edit.html">编辑</button><button class="abtn abtn-sm abtn-ghost" data-toast="已复制">复制</button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" style="width:16px;height:16px;accent-color:var(--brand);"></td>
+              <td><div class="row center gap12"><div class="mini-media g-gold">🧋</div><div><div class="tt-name">鲜萃柠檬茶</div><div class="tt-sub">SP10112 · 午茶</div></div></div></td>
+              <td><span class="badge badge-gold">午茶</span></td>
+              <td><div class="tt-name">¥8.00</div><div class="tt-sub">团餐 —</div></td>
+              <td class="tt-name">3,204</td>
+              <td><span class="pill pill-green">7 天</span></td>
+              <td><div class="switch on"><i></i></div></td>
+              <td><div class="row gap8"><button class="abtn abtn-sm abtn-line" data-go="product-edit.html">编辑</button><button class="abtn abtn-sm abtn-ghost" data-toast="已复制">复制</button></div></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" style="width:16px;height:16px;accent-color:var(--brand);"></td>
+              <td><div class="row center gap12"><div class="mini-media g-cool" style="opacity:.6">🐟</div><div><div class="tt-name" style="color:var(--ink-3)">深海鳕鱼块 300g</div><div class="tt-sub">SP10220 · 生鲜</div></div></div></td>
+              <td><span class="badge badge-ink">生鲜</span></td>
+              <td><div class="tt-name">¥39.90</div><div class="tt-sub">团餐 —</div></td>
+              <td class="tt-name">420</td>
+              <td><span class="pill pill-gray">未排期</span></td>
+              <td><div class="switch"><i></i></div></td>
+              <td><div class="row gap8"><button class="abtn abtn-sm abtn-line" data-go="product-edit.html">编辑</button><button class="abtn abtn-sm abtn-ghost" data-toast="已复制">复制</button></div></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row between center" style="padding:14px 20px;border-top:1px solid var(--hairline);">
+          <span class="tt-sub">已选 0 项 · 共 186 条</span>
+          <div class="row gap6">
+            <button class="abtn abtn-sm abtn-ghost" data-toast="上一页">‹</button>
+            <button class="abtn abtn-sm abtn-primary">1</button>
+            <button class="abtn abtn-sm abtn-ghost" data-toast="第 2 页">2</button>
+            <button class="abtn abtn-sm abtn-ghost" data-toast="第 3 页">3</button>
+            <button class="abtn abtn-sm abtn-ghost" data-toast="下一页">›</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="../assets/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>支付成功</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+</head>
+<body>
+<div class="screen">
+  <div class="statusbar"><span data-clock>9:41</span>
+    <span class="sb-right">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9h3v6H2zM7 6h3v9H7zM12 3h3v12h-3zM17 7h3v8h-3z"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/></svg>
+      <svg viewBox="0 0 26 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="18" height="10" rx="3"/><rect x="4" y="9" width="13" height="6" rx="1.5" fill="currentColor" stroke="none"/></svg>
+    </span>
+  </div>
+  <div class="navbar"><button class="nav-btn" data-go="home.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg></button></div>
+
+  <div class="page">
+    <div class="col center page-pad" style="padding-top:30px;">
+      <div class="fade-in" style="width:96px;height:96px;border-radius:50%;background:var(--green-soft);display:grid;place-items:center;">
+        <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.4"><path d="M4 12.5l5 5 11-11" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="t-title mt20">支付成功</div>
+      <div class="t-sub mt6">订单已送厨房备餐 · 预计 06/16 11:30 送达</div>
+
+      <div class="card card-pad fill mt24">
+        <div class="row between"><span class="t-sub">订单编号</span><span class="t-body">YX20260616093041</span></div>
+        <div class="row between mt10"><span class="t-sub">实付金额</span><span class="price t-brand"><span class="cur">¥</span>16.00</span></div>
+        <div class="row between mt10"><span class="t-sub">支付方式</span><span class="t-body">鲜币支付</span></div>
+        <div class="row between mt10"><span class="t-sub">送达地址</span><span class="t-body">德国中心 B座 18F</span></div>
+      </div>
+
+      <div class="card card-pad fill mt16 row center gap12" style="background:var(--gold-soft);box-shadow:none;">
+        <span style="font-size:30px;">🎁</span>
+        <div class="flex1"><div class="t-h3">本单获得 16 鲜币积分</div><div class="t-cap mt2">可在会员中心兑换好礼</div></div>
+        <button class="badge badge-gold" style="height:26px;" data-go="member.html">去看看</button>
+      </div>
+
+      <div class="row gap12 fill mt24">
+        <button class="btn btn-line flex1" data-go="home.html">返回首页</button>
+        <button class="btn btn-primary flex1" data-go="order-detail.html">查看订单</button>
+      </div>
+
+      <!-- share -->
+      <div class="divlabel mt24">把这份美味分享给同事</div>
+      <button class="btn btn-soft btn-block" data-go="wish.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8 11l8-5M8 13l8 5" stroke-linecap="round"/></svg>
+        分享菜单 · 邀请拼好饭
+      </button>
+    </div>
+    <div class="page-bottom"></div>
+  </div>
+  <div class="home-indicator"></div>
+</div>
+<script src="../assets/app.js"></script>
+<script>YX.setCart({});</script>
+</body>
+</html>

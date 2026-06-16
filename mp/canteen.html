@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>123新食堂 · 按日期订餐</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+</head>
+<body>
+<div class="screen">
+
+  <div class="brand-hero" style="flex:none;">
+    <div class="statusbar on-brand"><span data-clock>9:41</span>
+      <span class="sb-right">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9h3v6H2zM7 6h3v9H7zM12 3h3v12h-3zM17 7h3v8h-3z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/></svg>
+        <svg viewBox="0 0 26 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="18" height="10" rx="3"/><rect x="4" y="9" width="13" height="6" rx="1.5" fill="currentColor" stroke="none"/></svg>
+      </span>
+    </div>
+    <div class="navbar on-brand" style="padding-bottom:10px;">
+      <button class="nav-btn" data-go="home.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <span class="nav-title">123新食堂</span>
+      <div class="spacer"></div>
+      <button class="nav-btn" data-go="search.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4" stroke-linecap="round"/></svg></button>
+      <div class="capsule on-brand"><div class="c-dots"><i></i><i></i><i></i></div><div class="c-sep"></div><div class="c-o"></div></div>
+    </div>
+    <div style="padding:0 16px 12px;">
+      <div class="segment" style="display:flex;width:100%;background:rgba(255,255,255,.2);">
+        <a class="seg active" data-toggle-group="meal" style="flex:1;text-align:center;color:#fff;">套餐</a>
+        <a class="seg" data-toggle-group="meal" data-toast="单点·自由搭配" style="flex:1;text-align:center;color:rgba(255,255,255,.85);">单点</a>
+        <a class="seg" data-toggle-group="meal" data-toast="午茶时光" style="flex:1;text-align:center;color:rgba(255,255,255,.85);">午茶</a>
+        <a class="seg" data-toggle-group="meal" data-toast="零食解馋" style="flex:1;text-align:center;color:rgba(255,255,255,.85);">零食</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- date strip -->
+  <div style="flex:none;padding:12px 14px 10px;background:var(--bg);border-bottom:1px solid var(--hairline-2);">
+    <div class="row center between mb8" style="padding:0 2px;">
+      <span class="t-h3">选择就餐日期</span>
+      <span class="t-cap">每日 10:00 截单 · 次日送达</span>
+    </div>
+    <div class="datestrip">
+      <div class="dcell active" data-toggle-group="date"><div class="dw">今天</div><div class="dd">16</div><div class="dtag">可订</div></div>
+      <div class="dcell" data-toggle-group="date" data-toast="已选 06/17 周三"><div class="dw">周三</div><div class="dd">17</div><div class="dtag">可订</div></div>
+      <div class="dcell" data-toggle-group="date" data-toast="已选 06/18 周四"><div class="dw">周四</div><div class="dd">18</div><div class="dtag">可订</div></div>
+      <div class="dcell" data-toggle-group="date" data-toast="已选 06/19 周五"><div class="dw">周五</div><div class="dd">19</div><div class="dtag">可订</div></div>
+      <div class="dcell off"><div class="dw">周六</div><div class="dd">20</div><div class="dtag" style="color:var(--ink-3)">休息</div></div>
+      <div class="dcell off"><div class="dw">周日</div><div class="dd">21</div><div class="dtag" style="color:var(--ink-3)">休息</div></div>
+      <div class="dcell" data-toggle-group="date" data-toast="已选 06/22 周一"><div class="dw">周一</div><div class="dd">22</div><div class="dtag">可订</div></div>
+    </div>
+  </div>
+
+  <!-- split: rail + list -->
+  <div style="flex:1;display:flex;overflow:hidden;">
+    <div class="rail">
+      <div class="ri active" data-toggle-group="cat">全部</div>
+      <div class="ri" data-toggle-group="cat" data-toast="招牌套餐">招牌<br>套餐</div>
+      <div class="ri" data-toggle-group="cat" data-toast="原味本帮">原味<br>本帮</div>
+      <div class="ri" data-toggle-group="cat" data-toast="闽味鲜香">闽味<br>鲜香</div>
+      <div class="ri" data-toggle-group="cat" data-toast="轻食入门">轻食<br>入门</div>
+      <div class="ri" data-toggle-group="cat" data-toast="嘉味私房">嘉味<br>私房</div>
+      <div class="ri" data-toggle-group="cat" data-toast="汤品">汤品</div>
+    </div>
+
+    <div class="page" style="flex:1;padding:0 14px;">
+      <div class="scroll-head row center between">
+        <span class="t-h3">招牌套餐</span><span class="t-cap">12 款</span>
+      </div>
+
+      <div class="plist" style="padding-bottom:8px;">
+        <!-- row 1 -->
+        <div class="prow" data-stepper data-item='{"id":"c1","name":"晶香什锦套餐","price":21,"emoji":"🍱","grad":"g-rose"}'>
+          <a class="p-media media g-rose" data-go="product.html"><span class="emoji">🍱</span><span class="ph-fav" data-fav><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.3-9.3-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.3 12 19 16.7 12 21 12 21z"/></svg></span></a>
+          <div class="p-info">
+            <a data-go="product.html"><span class="p-name">晶香什锦套餐</span></a>
+            <div class="p-desc">2荤1素1主食 · 当日现炒</div>
+            <div class="tag-row mt6"><span class="badge badge-brand">招牌</span><span class="badge badge-green">少油少盐</span></div>
+            <div class="p-foot mt8">
+              <div class="p-price"><span class="price vip"><span class="cur">¥</span>21</span><span class="grp badge badge-gold">团餐¥18</span></div>
+              <div class="stepper"><button class="minus hidden" data-step="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14" stroke-linecap="round"/></svg></button><span class="qty hidden">0</span><button data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+            </div>
+          </div>
+        </div>
+        <!-- row 2 -->
+        <div class="prow" data-stepper data-item='{"id":"c2","name":"麻油鸡套餐","price":28,"emoji":"🍗","grad":"g-warm"}'>
+          <a class="p-media media g-warm" data-go="product.html"><span class="emoji">🍗</span><span class="ph-fav" data-fav><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.3-9.3-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.3 12 19 16.7 12 21 12 21z"/></svg></span></a>
+          <div class="p-info">
+            <a data-go="product.html"><span class="p-name">麻油鸡套餐</span></a>
+            <div class="p-desc">1荤2素1主食 · 大师监制</div>
+            <div class="tag-row mt6"><span class="badge badge-new">本帮</span><span class="badge badge-gold">月售2300+</span></div>
+            <div class="p-foot mt8">
+              <div class="p-price"><span class="price vip"><span class="cur">¥</span>28</span><span class="grp badge badge-gold">团餐¥24</span></div>
+              <div class="stepper"><button class="minus hidden" data-step="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14" stroke-linecap="round"/></svg></button><span class="qty hidden">0</span><button data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+            </div>
+          </div>
+        </div>
+        <!-- row 3 -->
+        <div class="prow" data-stepper data-item='{"id":"c3","name":"红烧狮子头套餐","price":29,"emoji":"🍲","grad":"g-cream"}'>
+          <a class="p-media media g-cream" data-go="product.html"><span class="emoji">🍲</span><span class="ph-fav" data-fav><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.3-9.3-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.3 12 19 16.7 12 21 12 21z"/></svg></span></a>
+          <div class="p-info">
+            <a data-go="product.html"><span class="p-name">红烧狮子头套餐</span></a>
+            <div class="p-desc">1荤2素1汤 · 入口即化</div>
+            <div class="tag-row mt6"><span class="badge badge-new">爆点</span></div>
+            <div class="p-foot mt8">
+              <div class="p-price"><span class="price vip"><span class="cur">¥</span>29</span><span class="grp badge badge-gold">团餐¥24</span></div>
+              <div class="stepper"><button class="minus hidden" data-step="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14" stroke-linecap="round"/></svg></button><span class="qty hidden">0</span><button data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+            </div>
+          </div>
+        </div>
+        <!-- row 4 -->
+        <div class="prow" data-stepper data-item='{"id":"c4","name":"闽南卤味套餐","price":26,"emoji":"🦆","grad":"g-gold"}'>
+          <a class="p-media media g-gold" data-go="product.html"><span class="emoji">🦆</span><span class="ph-fav" data-fav><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.3-9.3-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.3 12 19 16.7 12 21 12 21z"/></svg></span></a>
+          <div class="p-info">
+            <a data-go="product.html"><span class="p-name">闽南卤味套餐</span></a>
+            <div class="p-desc">武夷熏鹅 · 卤蛋 · 时蔬</div>
+            <div class="tag-row mt6"><span class="badge badge-brand">闽味</span></div>
+            <div class="p-foot mt8">
+              <div class="p-price"><span class="price vip"><span class="cur">¥</span>26</span><span class="grp badge badge-gold">团餐¥22</span></div>
+              <div class="stepper"><button class="minus hidden" data-step="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14" stroke-linecap="round"/></svg></button><span class="qty hidden">0</span><button data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+            </div>
+          </div>
+        </div>
+        <!-- row 5 -->
+        <div class="prow" data-stepper data-item='{"id":"c5","name":"轻食鸡胸沙拉","price":19,"emoji":"🥗","grad":"g-green"}'>
+          <a class="p-media media g-green" data-go="product.html"><span class="emoji">🥗</span><span class="ph-fav" data-fav><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.3-9.3-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.3 12 19 16.7 12 21 12 21z"/></svg></span></a>
+          <div class="p-info">
+            <a data-go="product.html"><span class="p-name">轻食鸡胸沙拉</span></a>
+            <div class="p-desc">高蛋白 · 低卡 · 健身首选</div>
+            <div class="tag-row mt6"><span class="badge badge-green">低卡</span></div>
+            <div class="p-foot mt8">
+              <div class="p-price"><span class="price vip"><span class="cur">¥</span>19</span></div>
+              <div class="stepper"><button class="minus hidden" data-step="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14" stroke-linecap="round"/></svg></button><span class="qty hidden">0</span><button data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+            </div>
+          </div>
+        </div>
+        <div class="page-bottom" style="height:84px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <a class="fab-cart" data-go="cart.html"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 7h15l-1.5 9.5a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 7z" stroke-linejoin="round"/><path d="M8 7V6a4 4 0 0 1 8 0v1" stroke-linecap="round"/></svg><span class="n" data-cart-count style="display:none;">0</span></a>
+
+  <nav class="tabbar">
+    <a class="tab" data-go="home.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10" stroke-linejoin="round"/></svg>首页</a>
+    <a class="tab active"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>分类</a>
+    <a class="tab center" data-go="wish.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.3-9.3-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.3 12 19 16.7 12 21 12 21z"/></svg>我想吃</a>
+    <a class="tab" data-go="cart.html"><span style="position:relative;display:inline-block;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7h15l-1.5 9.5a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 7z" stroke-linejoin="round"/><path d="M8 7V6a4 4 0 0 1 8 0v1" stroke-linecap="round"/></svg><span class="cart-dot" data-cart-count style="display:none;">0</span></span>购物车</a>
+    <a class="tab" data-go="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6" stroke-linecap="round"/></svg>我的</a>
+  </nav>
+  <div class="home-indicator"></div>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>找管家</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+</head>
+<body>
+<div class="screen">
+  <div class="brand-hero" style="flex:none;">
+    <div class="statusbar on-brand"><span data-clock>9:41</span>
+      <span class="sb-right">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9h3v6H2zM7 6h3v9H7zM12 3h3v12h-3zM17 7h3v8h-3z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/></svg>
+        <svg viewBox="0 0 26 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="18" height="10" rx="3"/><rect x="4" y="9" width="13" height="6" rx="1.5" fill="currentColor" stroke="none"/></svg>
+      </span>
+    </div>
+    <div class="navbar on-brand"><button class="nav-btn" data-go="home.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="nav-title">找管家</span></div>
+    <div class="page-pad" style="padding-bottom:22px;color:#fff;">
+      <div class="t-largetitle" style="color:#fff;">你的专属<br>膳食管家</div>
+      <div class="t-sub mt6" style="color:rgba(255,255,255,.9);">一对一帮你排餐、控预算、解决团餐难题</div>
+    </div>
+  </div>
+
+  <div class="page has-cta">
+    <!-- my butler -->
+    <div class="page-pad" style="margin-top:-12px;">
+      <div class="card card-pad row center gap12">
+        <div class="avatar" style="width:52px;height:52px;font-size:18px;background:var(--gold-grad);">李</div>
+        <div class="flex1"><div class="row center gap6"><span class="t-h3">李管家</span><span class="badge badge-green">服务中</span></div><div class="t-cap mt2">你的专属管家 · 已服务 36 天</div></div>
+        <button class="btn btn-soft btn-sm" data-toast="正在接通管家…"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5a16 16 0 0 0 15 15l2-3-4-2-2 2a12 12 0 0 1-6-6l2-2-2-4z" stroke-linejoin="round"/></svg>联系</button>
+      </div>
+    </div>
+
+    <!-- recommend butlers -->
+    <div class="page-pad">
+      <div class="section-head"><span class="t-h2">优选管家</span><span class="t-cap">按好评排序</span></div>
+      <div class="col gap14">
+        <div class="card card-pad">
+          <div class="row center gap12">
+            <div class="avatar" style="width:54px;height:54px;font-size:18px;">张</div>
+            <div class="flex1">
+              <div class="row center gap6"><span class="t-h3">张敏 · 五星管家</span></div>
+              <div class="row center gap4 mt2" style="color:var(--gold);font-size:13px;">★ 4.98 <span class="t-cap" style="color:var(--ink-3);margin-left:6px;">服务 1200+ 企业</span></div>
+              <div class="tag-row mt6"><span class="badge badge-brand">营养搭配</span><span class="badge badge-gold">控预算</span><span class="badge badge-green">企业团餐</span></div>
+            </div>
+          </div>
+          <div class="row gap10 mt12"><button class="btn btn-line btn-sm flex1" data-toast="查看管家主页">查看主页</button><button class="btn btn-primary btn-sm flex1" data-sheet-open="bookSheet">立即预约</button></div>
+        </div>
+        <div class="card card-pad">
+          <div class="row center gap12">
+            <div class="avatar" style="width:54px;height:54px;font-size:18px;background:var(--green);">周</div>
+            <div class="flex1">
+              <div class="row center gap6"><span class="t-h3">周磊 · 金牌管家</span></div>
+              <div class="row center gap4 mt2" style="color:var(--gold);font-size:13px;">★ 4.95 <span class="t-cap" style="color:var(--ink-3);margin-left:6px;">服务 860+ 企业</span></div>
+              <div class="tag-row mt6"><span class="badge badge-brand">轻食定制</span><span class="badge badge-green">健身餐</span></div>
+            </div>
+          </div>
+          <div class="row gap10 mt12"><button class="btn btn-line btn-sm flex1" data-toast="查看管家主页">查看主页</button><button class="btn btn-primary btn-sm flex1" data-sheet-open="bookSheet">立即预约</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="page-bottom"></div>
+  </div>
+
+  <div class="ctabar">
+    <button class="btn btn-line flex1" data-go="franchise.html">我要成为管家</button>
+    <button class="btn btn-primary flex1" data-sheet-open="bookSheet">预约管家</button>
+  </div>
+
+  <!-- book sheet -->
+  <div class="sheet" id="bookSheet">
+    <div class="grip"></div>
+    <div class="page-pad" style="padding-bottom:24px;">
+      <div class="row center between mt8"><span class="t-title">预约管家服务</span><button class="nav-btn" data-sheet-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg></button></div>
+      <div class="col gap14 mt16">
+        <div><div class="t-sub mb8">服务类型</div><div class="row gap8 wrap"><span class="opt active chip brand" data-toggle-group="bk">企业团餐</span><span class="chip" data-toggle-group="bk" data-toast="个人定制">个人定制</span><span class="chip" data-toggle-group="bk" data-toast="活动供餐">活动供餐</span></div></div>
+        <div><div class="t-sub mb8">预计人数</div><input style="width:100%;height:48px;border-radius:14px;border:1px solid var(--hairline);padding:0 16px;background:var(--surface-2);" placeholder="如 50 人"></div>
+        <div><div class="t-sub mb8">联系电话</div><input style="width:100%;height:48px;border-radius:14px;border:1px solid var(--hairline);padding:0 16px;background:var(--surface-2);" placeholder="请输入手机号"></div>
+        <button class="btn btn-primary btn-block mt8" data-sheet-close data-toast="预约成功 · 管家将尽快联系您">提交预约</button>
+      </div>
+    </div>
+  </div>
+  <div class="home-indicator"></div>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

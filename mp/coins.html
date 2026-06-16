@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>买鲜币</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+</head>
+<body>
+<div class="screen">
+  <div class="brand-hero" style="flex:none;">
+    <div class="statusbar on-brand"><span data-clock>9:41</span>
+      <span class="sb-right">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9h3v6H2zM7 6h3v9H7zM12 3h3v12h-3zM17 7h3v8h-3z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/></svg>
+        <svg viewBox="0 0 26 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="18" height="10" rx="3"/><rect x="4" y="9" width="13" height="6" rx="1.5" fill="currentColor" stroke="none"/></svg>
+      </span>
+    </div>
+    <div class="navbar on-brand"><button class="nav-btn" data-back><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="nav-title">买鲜币</span><div class="spacer"></div><button class="nav-btn" data-toast="鲜币使用规则"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01" stroke-linecap="round"/></svg></button></div>
+    <div class="page-pad" style="padding-bottom:22px;color:#fff;">
+      <div class="t-cap" style="color:rgba(255,255,255,.85);">鲜币余额</div>
+      <div class="price" style="font-size:42px;color:#fff;margin-top:2px;"><span style="font-size:22px;">🪙</span> 128.00</div>
+      <div class="t-cap mt4" style="color:rgba(255,255,255,.85);">1 鲜币 = ¥1 · 可用于全平台消费</div>
+    </div>
+  </div>
+
+  <div class="page has-cta">
+    <!-- recharge options -->
+    <div class="page-pad" style="margin-top:-12px;">
+      <div class="card card-pad">
+        <div class="t-h3 mb12">选择充值金额</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div class="card-flat card-pad txt-c" data-toggle-group="amt" data-toast="¥50"><div class="price" style="font-size:22px;">50</div><div class="t-cap mt2">鲜币</div></div>
+          <div class="card-flat card-pad txt-c active" data-toggle-group="amt" style="border:2px solid var(--brand);position:relative;"><span class="badge badge-new" style="position:absolute;top:-9px;right:10px;">送5</span><div class="price t-brand" style="font-size:22px;">100</div><div class="t-cap mt2">充100得105</div></div>
+          <div class="card-flat card-pad txt-c" data-toggle-group="amt" data-toast="¥200 送15"><div class="price" style="font-size:22px;">200</div><div class="t-cap mt2">充200得215</div></div>
+          <div class="card-flat card-pad txt-c" data-toggle-group="amt" data-toast="¥500 送50"><div class="price" style="font-size:22px;">500</div><div class="t-cap mt2">充500得550</div></div>
+        </div>
+        <div class="card-flat card-pad row center between mt10"><span class="t-sub">其他金额</span><span class="t-cap">自定义输入 ›</span></div>
+      </div>
+    </div>
+
+    <!-- pay method -->
+    <div class="page-pad mt16">
+      <div class="card card-pad">
+        <label class="cell" style="padding:8px 0;"><div class="cell-ic green"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg></div><span class="cell-t">微信支付</span><input type="radio" name="m" checked style="accent-color:var(--brand);width:20px;height:20px;"></label>
+      </div>
+    </div>
+
+    <!-- history -->
+    <div class="page-pad mt16">
+      <div class="section-head"><span class="t-h2">鲜币明细</span><a class="more" data-toast="全部明细">全部 ›</a></div>
+      <div class="cell-group">
+        <div class="cell"><div class="cell-ic green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></div><div class="cell-t">充值 +100<div class="t-cap" style="font-weight:400;">2026-06-10 14:22</div></div><span class="price t-brand" style="font-size:16px;">+105</span></div>
+        <div class="cell"><div class="cell-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7h15l-1.5 9.5a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 7z"/></svg></div><div class="cell-t">订单消费<div class="t-cap" style="font-weight:400;">2026-06-09 12:05</div></div><span class="price" style="font-size:16px;">-16</span></div>
+        <div class="cell"><div class="cell-ic gold"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 6.9H22l-6 4.6 2.3 7L12 16.9 5.7 20.5 8 13.5 2 8.9h7.6z"/></svg></div><div class="cell-t">拼团团长奖励<div class="t-cap" style="font-weight:400;">2026-06-08 12:40</div></div><span class="price t-brand" style="font-size:16px;">+5</span></div>
+      </div>
+    </div>
+    <div class="page-bottom"></div>
+  </div>
+
+  <div class="ctabar">
+    <div class="cta-price"><div class="lab">实付</div><div class="num price t-brand"><span class="cur">¥</span>100</div></div>
+    <button class="btn btn-primary" data-toast="充值成功 · 到账 105 鲜币 🎉" style="padding:0 36px;">立即充值</button>
+  </div>
+  <div class="home-indicator"></div>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

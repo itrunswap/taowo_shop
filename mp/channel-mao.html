@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>猫一筒 · 进口精选</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+</head>
+<body>
+<div class="screen">
+  <div style="flex:none;background:linear-gradient(135deg,#7B6CF6 0%,#5B4BE0 100%);position:relative;">
+    <div class="statusbar on-brand"><span data-clock>9:41</span>
+      <span class="sb-right">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9h3v6H2zM7 6h3v9H7zM12 3h3v12h-3zM17 7h3v8h-3z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/></svg>
+        <svg viewBox="0 0 26 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="18" height="10" rx="3"/><rect x="4" y="9" width="13" height="6" rx="1.5" fill="currentColor" stroke="none"/></svg>
+      </span>
+    </div>
+    <div class="navbar on-brand" style="padding-bottom:8px;"><button class="nav-btn" data-go="home.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="nav-title">猫一筒</span><div class="spacer"></div><div class="capsule on-brand"><div class="c-dots"><i></i><i></i><i></i></div><div class="c-sep"></div><div class="c-o"></div></div></div>
+    <div class="chan-tabs" style="padding-top:0;padding-bottom:8px;">
+      <a class="ct" data-go="home.html">云鲜超</a><a class="ct" data-go="canteen.html">123新食堂</a><a class="ct" data-go="local.html">本地生活</a><a class="ct active">猫一筒</a><a class="ct" data-go="channel-kadi.html">卡蒂望</a>
+    </div>
+  </div>
+
+  <div class="page has-tabbar">
+    <!-- hero -->
+    <div class="page-pad mt14">
+      <div class="card g-purple card-pad" style="box-shadow:var(--sh-2);">
+        <div class="row between center">
+          <div><div class="badge" style="background:#5B4BE0;color:#fff;">全球严选</div><div class="t-title mt8">一筒装下<br>全世界的好味</div><div class="t-sub mt6">进口零食 · 网红好物 · 限量首发</div></div>
+          <span style="font-size:70px;">🐱</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- cats -->
+    <div class="page-pad mt16">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px 2px;text-align:center;">
+        <div class="svc-cell" data-toast="进口零食"><div class="svc-ic g-purple">🍪</div><span class="svc-t">进口零食</span></div>
+        <div class="svc-cell" data-toast="网红饮料"><div class="svc-ic g-cool">🥤</div><span class="svc-t">网红饮料</span></div>
+        <div class="svc-cell" data-toast="精选茶咖"><div class="svc-ic g-gold">🍵</div><span class="svc-t">精选茶咖</span></div>
+        <div class="svc-cell" data-toast="萌趣周边"><div class="svc-ic g-rose">🧸</div><span class="svc-t">萌趣周边</span></div>
+      </div>
+    </div>
+
+    <!-- products -->
+    <div class="page-pad">
+      <div class="section-head"><span class="t-h2">本周上新</span><span class="badge" style="background:#5B4BE0;color:#fff;">限量</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div class="card card-pad" data-stepper data-item='{"id":"m1","name":"海盐巧克力","price":29.9,"emoji":"🍫","grad":"g-purple"}'>
+          <div class="media g-purple" style="height:100px;"><span class="emoji" style="font-size:48px;">🍫</span><span class="ph-badge badge badge-new">NEW</span></div>
+          <div class="t-h3 mt8" style="font-size:13.5px;">比利时海盐巧克力</div>
+          <div class="row center between mt6"><span class="price t-brand" style="font-size:16px;"><span class="cur">¥</span>29.9</span><button class="add-btn" data-step="1" style="background:#5B4BE0;box-shadow:0 6px 14px rgba(91,75,224,.4);"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+        </div>
+        <div class="card card-pad" data-stepper data-item='{"id":"m2","name":"气泡水","price":8.8,"emoji":"🥤","grad":"g-cool"}'>
+          <div class="media g-cool" style="height:100px;"><span class="emoji" style="font-size:48px;">🥤</span></div>
+          <div class="t-h3 mt8" style="font-size:13.5px;">日本白桃气泡水</div>
+          <div class="row center between mt6"><span class="price t-brand" style="font-size:16px;"><span class="cur">¥</span>8.8</span><button class="add-btn" data-step="1" style="background:#5B4BE0;box-shadow:0 6px 14px rgba(91,75,224,.4);"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+        </div>
+        <div class="card card-pad" data-stepper data-item='{"id":"m3","name":"抹茶曲奇","price":35,"emoji":"🍪","grad":"g-green"}'>
+          <div class="media g-green" style="height:100px;"><span class="emoji" style="font-size:48px;">🍪</span></div>
+          <div class="t-h3 mt8" style="font-size:13.5px;">宇治抹茶曲奇礼盒</div>
+          <div class="row center between mt6"><span class="price t-brand" style="font-size:16px;"><span class="cur">¥</span>35</span><button class="add-btn" data-step="1" style="background:#5B4BE0;box-shadow:0 6px 14px rgba(91,75,224,.4);"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+        </div>
+        <div class="card card-pad" data-stepper data-item='{"id":"m4","name":"坚果罐","price":42,"emoji":"🥜","grad":"g-gold"}'>
+          <div class="media g-gold" style="height:100px;"><span class="emoji" style="font-size:48px;">🥜</span></div>
+          <div class="t-h3 mt8" style="font-size:13.5px;">每日混合坚果罐</div>
+          <div class="row center between mt6"><span class="price t-brand" style="font-size:16px;"><span class="cur">¥</span>42</span><button class="add-btn" data-step="1" style="background:#5B4BE0;box-shadow:0 6px 14px rgba(91,75,224,.4);"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+        </div>
+      </div>
+    </div>
+    <div class="page-bottom"></div>
+  </div>
+
+  <a class="fab-cart" data-go="cart.html" style="background:linear-gradient(135deg,#7B6CF6,#5B4BE0);box-shadow:0 8px 22px rgba(91,75,224,.4);"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 7h15l-1.5 9.5a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 7z" stroke-linejoin="round"/><path d="M8 7V6a4 4 0 0 1 8 0v1" stroke-linecap="round"/></svg><span class="n" data-cart-count style="display:none;">0</span></a>
+
+  <nav class="tabbar">
+    <a class="tab" data-go="home.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10" stroke-linejoin="round"/></svg>首页</a>
+    <a class="tab" data-go="category.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>分类</a>
+    <a class="tab center" data-go="wish.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.3-9.3-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.3 12 19 16.7 12 21 12 21z"/></svg>我想吃</a>
+    <a class="tab" data-go="cart.html"><span style="position:relative;display:inline-block;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7h15l-1.5 9.5a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 7z" stroke-linejoin="round"/><path d="M8 7V6a4 4 0 0 1 8 0v1" stroke-linecap="round"/></svg><span class="cart-dot" data-cart-count style="display:none;">0</span></span>购物车</a>
+    <a class="tab" data-go="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6" stroke-linecap="round"/></svg>我的</a>
+  </nav>
+  <div class="home-indicator"></div>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

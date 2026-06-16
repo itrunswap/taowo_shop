@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>卡蒂望 · 精品咖啡</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+</head>
+<body>
+<div class="screen">
+  <div style="flex:none;background:linear-gradient(135deg,#6F4E37 0%,#3D2B1F 100%);position:relative;">
+    <div class="statusbar on-brand"><span data-clock>9:41</span>
+      <span class="sb-right">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9h3v6H2zM7 6h3v9H7zM12 3h3v12h-3zM17 7h3v8h-3z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/></svg>
+        <svg viewBox="0 0 26 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="18" height="10" rx="3"/><rect x="4" y="9" width="13" height="6" rx="1.5" fill="currentColor" stroke="none"/></svg>
+      </span>
+    </div>
+    <div class="navbar on-brand" style="padding-bottom:8px;"><button class="nav-btn" data-go="home.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="nav-title">卡蒂望</span><div class="spacer"></div><div class="capsule on-brand"><div class="c-dots"><i></i><i></i><i></i></div><div class="c-sep"></div><div class="c-o"></div></div></div>
+    <div class="chan-tabs" style="padding-top:0;padding-bottom:8px;">
+      <a class="ct" data-go="home.html">云鲜超</a><a class="ct" data-go="canteen.html">123新食堂</a><a class="ct" data-go="local.html">本地生活</a><a class="ct" data-go="channel-mao.html">猫一筒</a><a class="ct active">卡蒂望</a>
+    </div>
+  </div>
+
+  <div class="page has-tabbar">
+    <div class="page-pad mt14">
+      <div class="card card-pad" style="background:linear-gradient(135deg,#C9A57E,#8B6B4A);box-shadow:var(--sh-2);color:#fff;">
+        <div class="row between center">
+          <div><div class="badge" style="background:rgba(255,255,255,.25);color:#fff;">每日现萃</div><div class="t-title mt8" style="color:#fff;">一杯卡蒂望<br>唤醒一整天</div><div class="t-sub mt6" style="color:rgba(255,255,255,.9);">精品豆 · 手冲 · 烘焙现做</div></div>
+          <span style="font-size:70px;">☕</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- member promo -->
+    <div class="page-pad mt16">
+      <div class="card card-pad row center gap12" style="background:var(--gold-soft);box-shadow:none;">
+        <span style="font-size:26px;">🎟️</span><div class="flex1"><div class="t-h3">咖啡月卡 · ¥0.1 喝一杯</div><div class="t-cap mt2">每日 1 杯 · 月省 ¥300+</div></div><button class="badge badge-gold" style="height:26px;" data-go="member.html">开通</button>
+      </div>
+    </div>
+
+    <!-- menu -->
+    <div class="page-pad">
+      <div class="section-head"><span class="t-h2">人气咖啡</span></div>
+      <div class="plist">
+        <div class="prow" data-stepper data-item='{"id":"k1","name":"丝绒拿铁","price":22,"emoji":"☕","grad":"g-cream"}'>
+          <div class="p-media media g-cream"><span class="emoji">☕</span></div>
+          <div class="p-info"><span class="p-name">丝绒厚乳拿铁</span><div class="p-desc">阿拉比卡 · 绵密奶泡</div>
+            <div class="tag-row mt6"><span class="badge badge-brand">招牌</span><span class="badge badge-gold">月卡¥0.1</span></div>
+            <div class="p-foot mt8"><div class="p-price"><span class="price vip"><span class="cur">¥</span>22</span><span class="price-old">¥32</span></div>
+              <div class="stepper"><button class="minus hidden" data-step="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14" stroke-linecap="round"/></svg></button><span class="qty hidden">0</span><button data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+            </div>
+          </div>
+        </div>
+        <div class="prow" data-stepper data-item='{"id":"k2","name":"美式","price":15,"emoji":"🥤","grad":"g-warm"}'>
+          <div class="p-media media g-warm"><span class="emoji">🥤</span></div>
+          <div class="p-info"><span class="p-name">冰萃美式</span><div class="p-desc">低因可选 · 清爽回甘</div>
+            <div class="tag-row mt6"><span class="badge badge-green">0 糖</span></div>
+            <div class="p-foot mt8"><div class="p-price"><span class="price vip"><span class="cur">¥</span>15</span></div>
+              <div class="stepper"><button class="minus hidden" data-step="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14" stroke-linecap="round"/></svg></button><span class="qty hidden">0</span><button data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+            </div>
+          </div>
+        </div>
+        <div class="prow" data-stepper data-item='{"id":"k3","name":"可颂","price":12,"emoji":"🥐","grad":"g-gold"}'>
+          <div class="p-media media g-gold"><span class="emoji">🥐</span></div>
+          <div class="p-info"><span class="p-name">黄油可颂</span><div class="p-desc">现烤 · 层层酥脆</div>
+            <div class="tag-row mt6"><span class="badge badge-gold">现烤</span></div>
+            <div class="p-foot mt8"><div class="p-price"><span class="price vip"><span class="cur">¥</span>12</span></div>
+              <div class="stepper"><button class="minus hidden" data-step="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14" stroke-linecap="round"/></svg></button><span class="qty hidden">0</span><button data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-bottom"></div>
+  </div>
+
+  <a class="fab-cart" data-go="cart.html" style="background:linear-gradient(135deg,#8B6B4A,#3D2B1F);box-shadow:0 8px 22px rgba(61,43,31,.4);"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 7h15l-1.5 9.5a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 7z" stroke-linejoin="round"/><path d="M8 7V6a4 4 0 0 1 8 0v1" stroke-linecap="round"/></svg><span class="n" data-cart-count style="display:none;">0</span></a>
+
+  <nav class="tabbar">
+    <a class="tab" data-go="home.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10" stroke-linejoin="round"/></svg>首页</a>
+    <a class="tab" data-go="category.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>分类</a>
+    <a class="tab center" data-go="wish.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.3-9.3-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.3 12 19 16.7 12 21 12 21z"/></svg>我想吃</a>
+    <a class="tab" data-go="cart.html"><span style="position:relative;display:inline-block;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7h15l-1.5 9.5a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 7z" stroke-linejoin="round"/><path d="M8 7V6a4 4 0 0 1 8 0v1" stroke-linecap="round"/></svg><span class="cart-dot" data-cart-count style="display:none;">0</span></span>购物车</a>
+    <a class="tab" data-go="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6" stroke-linecap="round"/></svg>我的</a>
+  </nav>
+  <div class="home-indicator"></div>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

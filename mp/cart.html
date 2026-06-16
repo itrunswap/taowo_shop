@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>购物车</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+</head>
+<body>
+<div class="screen">
+  <div class="statusbar"><span data-clock>9:41</span>
+    <span class="sb-right">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9h3v6H2zM7 6h3v9H7zM12 3h3v12h-3zM17 7h3v8h-3z"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/></svg>
+      <svg viewBox="0 0 26 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="18" height="10" rx="3"/><rect x="4" y="9" width="13" height="6" rx="1.5" fill="currentColor" stroke="none"/></svg>
+    </span>
+  </div>
+  <div class="navbar">
+    <span class="nav-title">购物车</span><div class="spacer"></div>
+    <button class="nav-btn" data-toast="管理"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/></svg></button>
+  </div>
+
+  <div class="page has-cta">
+    <!-- delivery banner -->
+    <div class="page-pad mt8">
+      <div class="card card-pad row center gap10" style="background:var(--brand-soft-2);box-shadow:none;">
+        <span style="font-size:22px;">🛵</span>
+        <span class="t-sub flex1" style="color:var(--ink);">配送至 <b>123德国中心店</b> · 06/16 今天 12:00 前送达</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink-4)" stroke-width="2"><path d="M9 6l6 6-6 6" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+
+    <!-- empty -->
+    <div data-cart-empty class="col center" style="padding:80px 0;display:none;">
+      <div style="font-size:72px;opacity:.5;">🛒</div>
+      <div class="t-sub mt16">购物车还是空的</div>
+      <button class="btn btn-primary btn-sm mt20" data-go="canteen.html" style="padding:0 28px;">去点餐</button>
+    </div>
+
+    <!-- items -->
+    <div data-cart-when-items style="display:none;">
+      <div class="page-pad mt12">
+        <div class="card" style="overflow:hidden;">
+          <div class="row center gap8 card-pad" style="padding-bottom:8px;">
+            <span style="font-size:18px;">🏪</span><span class="t-h3">123新食堂 · 德国中心店</span>
+            <span class="badge badge-green" style="margin-left:auto;">06/16 今天</span>
+          </div>
+          <div id="cartItems" class="col"></div>
+        </div>
+      </div>
+
+      <!-- savings -->
+      <div class="page-pad mt16">
+        <div class="card card-pad">
+          <div class="cell" style="padding:6px 0;">
+            <div class="cell-ic gold"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 6.9H22l-6 4.6 2.3 7L12 16.9 5.7 20.5 8 13.5 2 8.9h7.6z"/></svg></div>
+            <span class="cell-t">会员价</span><span class="cell-v t-brand" style="font-weight:700;">已省 ¥6.00</span>
+          </div>
+          <div class="cell" style="padding:6px 0;">
+            <div class="cell-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3M4 9a2 2 0 0 0 2 2 2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2 2 2 0 0 0 2-2M9 4v16" stroke-linecap="round"/></svg></div>
+            <span class="cell-t">优惠券</span><span class="cell-v" data-sheet-open="couponSheet" style="color:var(--brand);font-weight:600;">满30减5 可用 ›</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- recommend add-on -->
+      <div class="page-pad">
+        <div class="section-head"><span class="t-h2">搭一杯更满足</span></div>
+        <div class="row gap10" style="overflow-x:auto;scrollbar-width:none;">
+          <div class="card card-pad" style="flex:none;width:120px;" data-stepper data-item='{"id":"d1","name":"鲜萃柠檬茶","price":8,"emoji":"🧋","grad":"g-gold"}'>
+            <div class="media g-gold" style="height:80px;"><span class="emoji">🧋</span></div>
+            <div class="t-h3 mt8" style="font-size:13px;">鲜萃柠檬茶</div>
+            <div class="row center between mt6"><span class="price t-brand" style="font-size:15px;"><span class="cur">¥</span>8</span>
+              <button class="add-btn" data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+          </div>
+          <div class="card card-pad" style="flex:none;width:120px;" data-stepper data-item='{"id":"d2","name":"酸辣汤","price":6,"emoji":"🥣","grad":"g-warm"}'>
+            <div class="media g-warm" style="height:80px;"><span class="emoji">🥣</span></div>
+            <div class="t-h3 mt8" style="font-size:13px;">招牌酸辣汤</div>
+            <div class="row center between mt6"><span class="price t-brand" style="font-size:15px;"><span class="cur">¥</span>6</span>
+              <button class="add-btn" data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+          </div>
+          <div class="card card-pad" style="flex:none;width:120px;" data-stepper data-item='{"id":"d3","name":"水果捞","price":12,"emoji":"🍓","grad":"g-rose"}'>
+            <div class="media g-rose" style="height:80px;"><span class="emoji">🍓</span></div>
+            <div class="t-h3 mt8" style="font-size:13px;">缤纷水果捞</div>
+            <div class="row center between mt6"><span class="price t-brand" style="font-size:15px;"><span class="cur">¥</span>12</span>
+              <button class="add-btn" data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-bottom"></div>
+  </div>
+
+  <!-- CTA -->
+  <div class="ctabar" data-cart-when-items style="display:none;">
+    <div class="cta-price">
+      <div class="num price"><span data-cart-total>¥0.00</span></div>
+      <div class="lab">已优惠 ¥11.00</div>
+    </div>
+    <button class="btn btn-primary" data-go="checkout.html" style="padding:0 34px;">去结算 (<span data-cart-count>0</span>)</button>
+  </div>
+
+  <!-- coupon sheet -->
+  <div class="sheet" id="couponSheet">
+    <div class="grip"></div>
+    <div class="page-pad" style="padding-bottom:24px;">
+      <div class="row center between mt8"><span class="t-title">选择优惠券</span><button class="nav-btn" data-sheet-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg></button></div>
+      <div class="col gap12 mt16">
+        <div class="card row" style="overflow:hidden;" data-sheet-close data-toast="已选用 满30减5">
+          <div class="brand-hero col center" style="width:96px;color:#fff;padding:14px;"><span class="price" style="font-size:26px;color:#fff;"><span class="cur">¥</span>5</span><span class="t-cap" style="color:#fff;opacity:.9;">满30可用</span></div>
+          <div class="card-pad flex1"><div class="t-h3">新食堂满减券</div><div class="t-cap mt4">有效期至 2026-06-30</div></div>
+          <div class="center" style="padding-right:16px;"><span class="badge badge-brand">使用</span></div>
+        </div>
+        <div class="card row" style="overflow:hidden;opacity:.55;">
+          <div class="col center" style="width:96px;background:var(--surface-2);padding:14px;"><span class="price" style="font-size:26px;"><span class="cur">¥</span>10</span><span class="t-cap">满60可用</span></div>
+          <div class="card-pad flex1"><div class="t-h3">会员专享券</div><div class="t-cap mt4">未满使用门槛</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="tabbar">
+    <a class="tab" data-go="home.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10" stroke-linejoin="round"/></svg>首页</a>
+    <a class="tab" data-go="category.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>分类</a>
+    <a class="tab center" data-go="wish.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.3-9.3-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.3 12 19 16.7 12 21 12 21z"/></svg>我想吃</a>
+    <a class="tab active"><span style="position:relative;display:inline-block;"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 7h15l-1.5 9.5a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 7z"/><path d="M8 7V6a4 4 0 0 1 8 0v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg><span class="cart-dot" data-cart-count style="display:none;">0</span></span>购物车</a>
+    <a class="tab" data-go="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6" stroke-linecap="round"/></svg>我的</a>
+  </nav>
+  <div class="home-indicator"></div>
+</div>
+<script src="../assets/app.js"></script>
+<script>
+  function renderCartItems(){
+    var c = YX.getCart(), box = document.getElementById('cartItems');
+    if(!box) return;
+    var html = '';
+    for(var k in c){ var it = c[k];
+      html += '<div class="cell" style="padding:14px 16px;">'
+        + '<div class="media '+it.grad+'" style="width:64px;height:64px;border-radius:14px;flex:none;"><span style="font-size:32px;">'+it.emoji+'</span></div>'
+        + '<div class="flex1" style="margin-left:13px;"><div class="t-h3" style="font-size:15px;">'+it.name+'</div>'
+        + '<div class="row center between mt8"><span class="price t-brand" style="font-size:18px;"><span class="cur">¥</span>'+it.price+'</span>'
+        + '<div class="stepper" data-stepper data-item=\''+JSON.stringify(it)+'\'>'
+        + '<button class="minus" data-step="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14" stroke-linecap="round"/></svg></button>'
+        + '<span class="qty">'+it.qty+'</span>'
+        + '<button data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>'
+        + '</div></div></div></div>';
+    }
+    box.innerHTML = html;
+  }
+  renderCartItems();
+  document.addEventListener('cart:change', renderCartItems);
+</script>
+</body>
+</html>

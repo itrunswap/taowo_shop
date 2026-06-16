@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>会员管理 · 云鲜运营台</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/admin.css">
+</head>
+<body data-page="members">
+<div class="admin">
+  <aside class="sidebar" id="side"></aside>
+  <div class="main">
+    <header class="topbar">
+      <div><div class="crumb">用户增长</div><div class="ptitle">会员管理</div></div>
+      <div class="tsearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4" stroke-linecap="round"/></svg>搜索会员 / 手机号</div>
+      <button class="ticon" data-toast="导出会员"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </header>
+
+    <main class="content">
+      <div class="row between center" style="margin-bottom:18px;">
+        <div><div class="page-title">会员管理</div><div class="page-desc">管理会员等级、鲜币、成长值与权益</div></div>
+        <button class="abtn abtn-primary" data-toast="新建会员等级"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>会员等级设置</button>
+      </div>
+
+      <div class="grid g-4" style="margin-bottom:18px;">
+        <div class="stat"><div class="s-top"><div class="s-ic tint-brand">👥</div></div><div class="s-label">总会员数</div><div class="s-value">128,640</div><div class="s-delta up">▲ 3.6% 本周</div></div>
+        <div class="stat"><div class="s-top"><div class="s-ic tint-gold">👑</div></div><div class="s-label">付费会员</div><div class="s-value">42,180</div><div class="s-delta up">▲ 5.2%</div></div>
+        <div class="stat"><div class="s-top"><div class="s-ic tint-green">✨</div></div><div class="s-label">今日新增</div><div class="s-value">386</div></div>
+        <div class="stat"><div class="s-top"><div class="s-ic tint-blue">💰</div></div><div class="s-label">会员消费占比</div><div class="s-value">68%</div></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-body" style="padding:0 20px;">
+          <div class="atabs">
+            <div class="at active" data-tab>全部会员</div>
+            <div class="at" data-tab data-toast-on="黄金会员">黄金会员</div>
+            <div class="at" data-tab data-toast-on="铂金会员">铂金会员</div>
+            <div class="at" data-tab data-toast-on="普通会员">普通会员</div>
+            <div class="at" data-tab data-toast-on="即将到期">即将到期</div>
+          </div>
+        </div>
+        <table class="table">
+          <thead><tr><th>会员</th><th>等级</th><th>鲜币余额</th><th>成长值</th><th>累计消费</th><th>最近活跃</th><th>操作</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="row center gap10"><div class="avatar" style="width:36px;height:36px;font-size:13px;">王</div><div><div class="tt-name">王经理</div><div class="tt-sub">181****6688</div></div></div></td>
+              <td><span class="vip-pill" style="background:linear-gradient(135deg,#3a2c1a,#1d1d1f);">👑 黄金</span></td>
+              <td class="tt-name">128.00</td><td>2,860</td><td class="tt-name">¥8,640</td><td class="tt-sub">10 分钟前</td>
+              <td><button class="abtn abtn-sm abtn-line" data-toast="查看会员档案">详情</button></td>
+            </tr>
+            <tr>
+              <td><div class="row center gap10"><div class="avatar" style="width:36px;height:36px;font-size:13px;background:var(--gold-grad);">张</div><div><div class="tt-name">张敏</div><div class="tt-sub">138****2046</div></div></div></td>
+              <td><span class="pill pill-blue">铂金</span></td>
+              <td class="tt-name">560.00</td><td>9,120</td><td class="tt-name">¥24,300</td><td class="tt-sub">1 小时前</td>
+              <td><button class="abtn abtn-sm abtn-line" data-toast="查看会员档案">详情</button></td>
+            </tr>
+            <tr>
+              <td><div class="row center gap10"><div class="avatar" style="width:36px;height:36px;font-size:13px;background:var(--green);">陈</div><div><div class="tt-name">陈芳</div><div class="tt-sub">159****7781</div></div></div></td>
+              <td><span class="pill pill-gold">黄金</span></td>
+              <td class="tt-name">36.00</td><td>1,240</td><td class="tt-name">¥3,180</td><td class="tt-sub">昨天</td>
+              <td><button class="abtn abtn-sm abtn-line" data-toast="查看会员档案">详情</button></td>
+            </tr>
+            <tr>
+              <td><div class="row center gap10"><div class="avatar" style="width:36px;height:36px;font-size:13px;background:var(--ink-3);">李</div><div><div class="tt-name">李伟</div><div class="tt-sub">137****5520</div></div></div></td>
+              <td><span class="pill pill-gray">普通</span></td>
+              <td class="tt-name">0.00</td><td>180</td><td class="tt-name">¥420</td><td class="tt-sub">3 天前</td>
+              <td><button class="abtn abtn-sm abtn-line" data-toast="查看会员档案">详情</button></td>
+            </tr>
+            <tr>
+              <td><div class="row center gap10"><div class="avatar" style="width:36px;height:36px;font-size:13px;background:var(--brand-grad);">孙</div><div><div class="tt-name">孙倩</div><div class="tt-sub">186****9034</div></div></div></td>
+              <td><span class="pill pill-gold">黄金</span> <span class="pill pill-red">3天后到期</span></td>
+              <td class="tt-name">88.00</td><td>3,400</td><td class="tt-name">¥9,860</td><td class="tt-sub">2 小时前</td>
+              <td><button class="abtn abtn-sm abtn-primary" data-toast="已推送续费提醒">提醒续费</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row between center" style="padding:14px 20px;border-top:1px solid var(--hairline);"><span class="tt-sub">共 128,640 名会员</span><div class="row gap6"><button class="abtn abtn-sm abtn-ghost">‹</button><button class="abtn abtn-sm abtn-primary">1</button><button class="abtn abtn-sm abtn-ghost" data-toast="第2页">2</button><button class="abtn abtn-sm abtn-ghost" data-toast="下一页">›</button></div></div>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="../assets/admin.js"></script>
+</body>
+</html>

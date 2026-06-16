@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>确认订单</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+</head>
+<body>
+<div class="screen">
+  <div class="statusbar"><span data-clock>9:41</span>
+    <span class="sb-right">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9h3v6H2zM7 6h3v9H7zM12 3h3v12h-3zM17 7h3v8h-3z"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/></svg>
+      <svg viewBox="0 0 26 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="18" height="10" rx="3"/><rect x="4" y="9" width="13" height="6" rx="1.5" fill="currentColor" stroke="none"/></svg>
+    </span>
+  </div>
+  <div class="navbar">
+    <button class="nav-btn" data-back><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <span class="nav-title">确认订单</span>
+  </div>
+
+  <div class="page has-cta">
+    <!-- address -->
+    <div class="page-pad mt8">
+      <div class="card card-pad row center gap12" data-toast="切换收货地址">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--brand)"><path d="M12 2c-3.9 0-7 3.1-7 7 0 5 7 13 7 13s7-8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        <div class="flex1">
+          <div class="row center gap8"><span class="t-h3">王经理</span><span class="t-sub">181****6688</span></div>
+          <div class="t-sub mt2">浦东新区 · 123德国中心 B座 18F 行政部</div>
+        </div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink-4)" stroke-width="2"><path d="M9 6l6 6-6 6" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+
+    <!-- delivery time -->
+    <div class="page-pad mt16">
+      <div class="card card-pad">
+        <div class="cell" style="padding:6px 0;">
+          <div class="cell-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 9h18M8 3v4M16 3v4" stroke-linecap="round"/></svg></div>
+          <span class="cell-t">送达日期</span><span class="cell-v" style="color:var(--ink);font-weight:600;">06/16 今天</span>
+        </div>
+        <div class="cell" style="padding:6px 0;">
+          <div class="cell-ic green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3" stroke-linecap="round"/></svg></div>
+          <span class="cell-t">送达时段</span>
+          <div class="segment" style="transform:scale(.9);transform-origin:right;">
+            <a class="seg active" data-toggle-group="slot">11:30</a>
+            <a class="seg" data-toggle-group="slot" data-toast="已选 12:00 送达">12:00</a>
+            <a class="seg" data-toggle-group="slot" data-toast="已选 12:30 送达">12:30</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- items -->
+    <div class="page-pad mt16">
+      <div class="card" style="overflow:hidden;">
+        <div class="row center gap8 card-pad" style="padding-bottom:6px;"><span style="font-size:18px;">🏪</span><span class="t-h3">123新食堂 · 德国中心店</span></div>
+        <div id="coItems"></div>
+      </div>
+    </div>
+
+    <!-- payment -->
+    <div class="page-pad mt16">
+      <div class="card card-pad">
+        <span class="t-h3">支付方式</span>
+        <div class="col mt12 gap2">
+          <label class="cell" style="padding:10px 0;">
+            <div class="cell-ic gold"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><text x="12" y="16" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">币</text></svg></div>
+            <div class="cell-t">鲜币支付 <span class="t-cap">余额 ¥128.00</span></div>
+            <input type="radio" name="pay" checked style="accent-color:var(--brand);width:20px;height:20px;">
+          </label>
+          <label class="cell" style="padding:10px 0;">
+            <div class="cell-ic green"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 11c-3.9 0-7-2.5-7-5.5S5.1 0 9 0s7 2.5 7 5.5c0 .9-.3 1.7-.7 2.5"/><path d="M15 8c3.3 0 6 2.2 6 4.8 0 1.5-.9 2.9-2.3 3.8l.6 2-2.2-1.1c-.6.2-1.4.3-2.1.3-3.3 0-6-2.2-6-4.8S11.7 8 15 8z"/></svg></div>
+            <div class="cell-t">微信支付</div>
+            <input type="radio" name="pay" style="accent-color:var(--brand);width:20px;height:20px;">
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- price breakdown -->
+    <div class="page-pad mt16">
+      <div class="card card-pad col gap10">
+        <div class="row between"><span class="t-sub">商品金额</span><span class="t-body" data-cart-total>¥0.00</span></div>
+        <div class="row between"><span class="t-sub">会员优惠</span><span class="t-brand" style="font-weight:600;">-¥6.00</span></div>
+        <div class="row between"><span class="t-sub">优惠券</span><span class="t-brand" style="font-weight:600;">-¥5.00</span></div>
+        <div class="row between"><span class="t-sub">配送费</span><span class="t-body">¥0.00 <span class="badge badge-green">团餐免配</span></span></div>
+      </div>
+    </div>
+
+    <!-- remark -->
+    <div class="page-pad mt16">
+      <div class="card card-pad cell" style="padding:6px 0;">
+        <div class="cell-ic blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v11H8l-4 4z" stroke-linejoin="round"/></svg></div>
+        <span class="cell-t">订单备注</span><span class="cell-v" data-toast="备注：不要香菜">口味/餐具备注 ›</span>
+      </div>
+    </div>
+
+    <div class="page-bottom"></div>
+  </div>
+
+  <div class="ctabar">
+    <div class="cta-price">
+      <div class="lab">实付</div>
+      <div class="num price t-brand" id="payTotal">¥0.00</div>
+    </div>
+    <button class="btn btn-primary" data-go="pay-success.html" style="padding:0 36px;">提交订单</button>
+  </div>
+  <div class="home-indicator"></div>
+</div>
+<script src="../assets/app.js"></script>
+<script>
+  var c = YX.getCart(); var box = document.getElementById('coItems'); var html='';
+  for(var k in c){ var it=c[k];
+    html += '<div class="cell" style="padding:10px 16px;"><div class="media '+it.grad+'" style="width:50px;height:50px;border-radius:12px;flex:none;"><span style="font-size:26px;">'+it.emoji+'</span></div>'
+      + '<div class="flex1" style="margin-left:12px;"><div class="t-h3" style="font-size:14px;">'+it.name+'</div><div class="t-cap mt2">×'+it.qty+'</div></div>'
+      + '<span class="price" style="font-size:15px;"><span class="cur">¥</span>'+(it.price*it.qty)+'</span></div>';
+  }
+  if(!html) html = '<div class="card-pad t-sub">购物车为空，请先选餐。</div>';
+  box.innerHTML = html;
+  var pay = Math.max(0, YX.cartTotal()-11);
+  document.getElementById('payTotal').innerHTML = '<span class="cur">¥</span>'+pay.toFixed(2);
+</script>
+</body>
+</html>

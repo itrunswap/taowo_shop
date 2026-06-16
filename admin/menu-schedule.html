@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>周菜单排期 · 云鲜运营台</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/admin.css">
+<style>
+  .matrix{ width:100%; border-collapse:separate; border-spacing:0; }
+  .matrix th, .matrix td{ padding:0; }
+  .matrix thead th{ position:sticky; top:0; background:#fff; z-index:2; padding:12px 8px; text-align:center; border-bottom:1px solid var(--hairline); }
+  .matrix thead th .dw{ font-size:12px; color:var(--ink-3); font-weight:600; } .matrix thead th .dd{ font-size:16px; font-weight:800; }
+  .matrix thead th.today{ color:var(--brand); } .matrix thead th.today .dd{ color:var(--brand); }
+  .matrix thead th.weekend{ color:var(--ink-4); }
+  .matrix .dish-col{ position:sticky; left:0; background:#fff; z-index:1; text-align:left; min-width:230px; padding:12px 14px; border-bottom:1px solid var(--hairline-2); border-right:1px solid var(--hairline); }
+  .matrix td.cell{ border-bottom:1px solid var(--hairline-2); border-right:1px solid var(--hairline-2); text-align:center; padding:8px; }
+  .slot{ width:100%; min-width:64px; height:46px; border-radius:10px; display:flex; flex-direction:column; align-items:center; justify-content:center; cursor:pointer; transition:transform .1s; font-weight:700; }
+  .slot:active{ transform:scale(.95); }
+  .slot.on{ background:var(--brand-soft); color:var(--brand); }
+  .slot.on .q{ font-size:15px; } .slot.on .l{ font-size:9px; font-weight:600; opacity:.8; }
+  .slot.off{ background:var(--surface-2); color:var(--ink-4); border:1px dashed var(--ink-4); font-size:18px; font-weight:400; }
+  .slot.soldout{ background:repeating-linear-gradient(45deg,#f0ece7,#f0ece7 6px,#f7f4f1 6px,#f7f4f1 12px); color:var(--ink-3); font-size:11px; }
+</style>
+</head>
+<body data-page="menu-schedule">
+<div class="admin">
+  <aside class="sidebar" id="side"></aside>
+  <div class="main">
+    <header class="topbar">
+      <div><div class="crumb">餐饮运营</div><div class="ptitle">周菜单排期</div></div>
+      <div class="tsearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4" stroke-linecap="round"/></svg>搜索菜品</div>
+      <button class="ticon" data-toast="暂无新通知"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 7 3 9H3c0-2 3-2 3-9M10 21a2 2 0 0 0 4 0" stroke-linejoin="round"/></svg><span class="dot"></span></button>
+    </header>
+
+    <main class="content">
+      <!-- toolbar -->
+      <div class="row between center" style="margin-bottom:18px;">
+        <div class="row center gap12">
+          <button class="ticon" data-toast="上一周"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6" stroke-linecap="round"/></svg></button>
+          <div class="txt-c"><div style="font-size:17px;font-weight:800;">2026/06/16 - 06/22</div><div class="page-desc" style="margin:0;">本周 · 第 25 周</div></div>
+          <button class="ticon" data-toast="下一周"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6" stroke-linecap="round"/></svg></button>
+        </div>
+        <div class="row gap10">
+          <select class="select" style="width:180px;"><option>123新食堂 · 德国中心店</option><option>123新食堂 · 云图科技店</option></select>
+          <button class="abtn abtn-line" data-toast="已复制上周菜单到本周"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8" stroke-linecap="round"/></svg>复制上周</button>
+          <button class="abtn abtn-primary" data-toast="本周菜单已发布，小程序同步更新 🎉">发布菜单</button>
+        </div>
+      </div>
+
+      <!-- summary -->
+      <div class="grid g-4" style="margin-bottom:18px;">
+        <div class="stat"><div class="s-label">本周排期菜品</div><div class="s-value">32 道</div></div>
+        <div class="stat"><div class="s-label">预计供应份数</div><div class="s-value">4,280</div></div>
+        <div class="stat"><div class="s-label">已被预订</div><div class="s-value" style="color:var(--brand);">2,914</div></div>
+        <div class="stat"><div class="s-label">排期完成度</div><div class="s-value">86%</div><div class="prow-bar mt8"><i style="width:86%"></i></div></div>
+      </div>
+
+      <!-- category tabs -->
+      <div class="atabs" style="margin-bottom:8px;">
+        <div class="at active" data-tab>套餐</div>
+        <div class="at" data-tab data-toast-on="切换到 单点">单点</div>
+        <div class="at" data-tab data-toast-on="切换到 午茶">午茶</div>
+        <div class="at" data-tab data-toast-on="切换到 零食">零食</div>
+      </div>
+
+      <!-- matrix -->
+      <div class="panel" style="overflow:hidden;">
+        <div class="scrollx">
+          <table class="matrix">
+            <thead>
+              <tr>
+                <th class="dish-col" style="text-align:left;">菜品 / 日期</th>
+                <th class="today"><div class="dw">周一·今天</div><div class="dd">16</div></th>
+                <th><div class="dw">周二</div><div class="dd">17</div></th>
+                <th><div class="dw">周三</div><div class="dd">18</div></th>
+                <th><div class="dw">周四</div><div class="dd">19</div></th>
+                <th><div class="dw">周五</div><div class="dd">20</div></th>
+                <th class="weekend"><div class="dw">周六</div><div class="dd">21</div></th>
+                <th class="weekend"><div class="dw">周日</div><div class="dd">22</div></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="dish-col"><div class="row center gap10"><div class="mini-media g-rose">🍱</div><div><div class="tt-name">晶香什锦套餐</div><div class="tt-sub">¥21 · 2荤1素1主食</div></div></div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">120</span><span class="l">已订98</span></div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">120</span><span class="l">已订64</span></div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">100</span><span class="l">已订30</span></div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">100</span><span class="l">未开放</span></div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">80</span><span class="l">未开放</span></div></td>
+                <td class="cell"><div class="slot off" data-toast="排入周六">+</div></td>
+                <td class="cell"><div class="slot off" data-toast="排入周日">+</div></td>
+              </tr>
+              <tr>
+                <td class="dish-col"><div class="row center gap10"><div class="mini-media g-warm">🍗</div><div><div class="tt-name">麻油鸡套餐</div><div class="tt-sub">¥28 · 大师监制</div></div></div></td>
+                <td class="cell"><div class="slot soldout" data-toast="今日已售罄">售罄</div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">90</span><span class="l">已订52</span></div></td>
+                <td class="cell"><div class="slot off" data-toast="排入周三">+</div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">90</span><span class="l">未开放</span></div></td>
+                <td class="cell"><div class="slot off" data-toast="排入周五">+</div></td>
+                <td class="cell"><div class="slot off" data-toast="排入周六">+</div></td>
+                <td class="cell"><div class="slot off" data-toast="排入周日">+</div></td>
+              </tr>
+              <tr>
+                <td class="dish-col"><div class="row center gap10"><div class="mini-media g-cream">🍲</div><div><div class="tt-name">回锅肉套餐</div><div class="tt-sub">¥27 · 川味经典</div></div></div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">110</span><span class="l">已订88</span></div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">110</span><span class="l">已订71</span></div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">110</span><span class="l">已订40</span></div></td>
+                <td class="cell"><div class="slot off" data-toast="排入周四">+</div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">90</span><span class="l">未开放</span></div></td>
+                <td class="cell"><div class="slot off" data-toast="排入周六">+</div></td>
+                <td class="cell"><div class="slot off" data-toast="排入周日">+</div></td>
+              </tr>
+              <tr>
+                <td class="dish-col"><div class="row center gap10"><div class="mini-media g-gold">🦆</div><div><div class="tt-name">闽南卤味套餐</div><div class="tt-sub">¥26 · 武夷熏鹅</div></div></div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">60</span><span class="l">已订41</span></div></td>
+                <td class="cell"><div class="slot off" data-toast="排入周二">+</div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">60</span><span class="l">已订12</span></div></td>
+                <td class="cell"><div class="slot off" data-toast="排入周四">+</div></td>
+                <td class="cell"><div class="slot off" data-toast="排入周五">+</div></td>
+                <td class="cell"><div class="slot off" data-toast="排入周六">+</div></td>
+                <td class="cell"><div class="slot off" data-toast="排入周日">+</div></td>
+              </tr>
+              <tr>
+                <td class="dish-col"><div class="row center gap10"><div class="mini-media g-green">🥗</div><div><div class="tt-name">轻食鸡胸沙拉</div><div class="tt-sub">¥19 · 低卡健身</div></div></div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">50</span><span class="l">已订33</span></div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">50</span><span class="l">已订28</span></div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">50</span><span class="l">已订19</span></div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">50</span><span class="l">未开放</span></div></td>
+                <td class="cell"><div class="slot on" data-toast="点击编辑排期"><span class="q">50</span><span class="l">未开放</span></div></td>
+                <td class="cell"><div class="slot off" data-toast="排入周六">+</div></td>
+                <td class="cell"><div class="slot off" data-toast="排入周日">+</div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="row center gap16" style="padding:14px 20px;border-top:1px solid var(--hairline);">
+          <span class="legend"><i style="background:var(--brand-soft);border:1px solid var(--brand)"></i>已排期 (数字=供应份数)</span>
+          <span class="legend"><i style="background:var(--surface-2);border:1px dashed var(--ink-4)"></i>未排期</span>
+          <span class="legend"><i style="background:#ece8e3"></i>已售罄</span>
+          <button class="abtn abtn-ghost abtn-sm" style="margin-left:auto;" data-go="products.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>从商品库添加菜品</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="../assets/admin.js"></script>
+<script>
+  // toggle on/off cells
+  document.addEventListener('click', function(e){
+    var s = e.target.closest('.slot'); if(!s) return;
+    if(s.classList.contains('off')){ s.classList.remove('off'); s.classList.add('on'); s.innerHTML='<span class="q">80</span><span class="l">新排期</span>'; }
+  });
+</script>
+</body>
+</html>

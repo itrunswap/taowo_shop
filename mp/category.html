@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>分类 · 云鲜超</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+<style>
+  .gcard{ background:var(--surface); border-radius:var(--r-md); box-shadow:var(--sh-1); padding:8px; }
+  .gcard .gm{ height:88px; border-radius:12px; }
+  .gcard .gm .emoji{ font-size:44px; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="statusbar"><span data-clock>9:41</span>
+    <span class="sb-right">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9h3v6H2zM7 6h3v9H7zM12 3h3v12h-3zM17 7h3v8h-3z"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/></svg>
+      <svg viewBox="0 0 26 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="18" height="10" rx="3"/><rect x="4" y="9" width="13" height="6" rx="1.5" fill="currentColor" stroke="none"/></svg>
+    </span>
+  </div>
+  <div class="navbar" style="padding-bottom:10px;">
+    <span class="nav-title">商品分类</span>
+    <div class="spacer"></div>
+    <div class="searchbar" data-go="search.html" style="width:200px;box-shadow:var(--sh-1);background:var(--surface);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4" stroke-linecap="round"/></svg><span>搜索生鲜好物</span>
+    </div>
+  </div>
+
+  <div style="flex:1;display:flex;overflow:hidden;">
+    <div class="rail">
+      <div class="ri active" data-toggle-group="gcat">🥬<br>时令蔬菜</div>
+      <div class="ri" data-toggle-group="gcat" data-toast="新鲜水果">🍎<br>新鲜水果</div>
+      <div class="ri" data-toggle-group="gcat" data-toast="肉禽蛋品">🍖<br>肉禽蛋品</div>
+      <div class="ri" data-toggle-group="gcat" data-toast="海鲜水产">🐟<br>海鲜水产</div>
+      <div class="ri" data-toggle-group="gcat" data-toast="粮油调味">🍚<br>粮油调味</div>
+      <div class="ri" data-toggle-group="gcat" data-toast="乳品烘焙">🥛<br>乳品烘焙</div>
+      <div class="ri" data-toggle-group="gcat" data-toast="休闲零食">🍿<br>休闲零食</div>
+      <div class="ri" data-toggle-group="gcat" data-toast="酒水饮料">🍷<br>酒水饮料</div>
+    </div>
+
+    <div class="page" style="flex:1;padding:0 12px;">
+      <!-- banner -->
+      <div class="mt12">
+        <div class="card g-green card-pad row center between" style="box-shadow:none;">
+          <div><div class="t-h3">产地直采 · 当日达</div><div class="t-cap mt2">凌晨采摘 · 锁鲜配送</div></div>
+          <span style="font-size:40px;">🚚</span>
+        </div>
+      </div>
+
+      <div class="scroll-head row center between"><span class="t-h3">时令蔬菜</span><span class="t-cap">36 件</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-bottom:90px;">
+        <div class="gcard" data-stepper data-item='{"id":"g1","name":"有机西兰花","price":6.9,"emoji":"🥦","grad":"g-green"}'>
+          <div class="gm media g-green"><span class="emoji">🥦</span></div>
+          <div class="t-h3 mt8" style="font-size:13.5px;">有机西兰花 400g</div>
+          <div class="t-cap mt2">脆嫩多汁 · 当季</div>
+          <div class="row center between mt6"><span class="price t-brand" style="font-size:16px;"><span class="cur">¥</span>6.9</span><button class="add-btn" data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+        </div>
+        <div class="gcard" data-stepper data-item='{"id":"g2","name":"水果番茄","price":9.9,"emoji":"🍅","grad":"g-rose"}'>
+          <div class="gm media g-rose"><span class="emoji">🍅</span></div>
+          <div class="t-h3 mt8" style="font-size:13.5px;">普罗旺斯番茄 500g</div>
+          <div class="t-cap mt2">沙瓤多汁 · 生吃</div>
+          <div class="row center between mt6"><span class="price t-brand" style="font-size:16px;"><span class="cur">¥</span>9.9</span><button class="add-btn" data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+        </div>
+        <div class="gcard" data-stepper data-item='{"id":"g3","name":"嫩黄瓜","price":4.5,"emoji":"🥒","grad":"g-green"}'>
+          <div class="gm media g-green"><span class="emoji">🥒</span></div>
+          <div class="t-h3 mt8" style="font-size:13.5px;">脆嫩黄瓜 3根</div>
+          <div class="t-cap mt2">清爽零负担</div>
+          <div class="row center between mt6"><span class="price t-brand" style="font-size:16px;"><span class="cur">¥</span>4.5</span><button class="add-btn" data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+        </div>
+        <div class="gcard" data-stepper data-item='{"id":"g4","name":"金针菇","price":3.9,"emoji":"🍄","grad":"g-cream"}'>
+          <div class="gm media g-cream"><span class="emoji">🍄</span></div>
+          <div class="t-h3 mt8" style="font-size:13.5px;">鲜采金针菇 200g</div>
+          <div class="t-cap mt2">火锅必备</div>
+          <div class="row center between mt6"><span class="price t-brand" style="font-size:16px;"><span class="cur">¥</span>3.9</span><button class="add-btn" data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+        </div>
+        <div class="gcard" data-stepper data-item='{"id":"g5","name":"菠菜","price":5.5,"emoji":"🥬","grad":"g-green"}'>
+          <div class="gm media g-green"><span class="emoji">🥬</span></div>
+          <div class="t-h3 mt8" style="font-size:13.5px;">高山菠菜 300g</div>
+          <div class="t-cap mt2">铁元素丰富</div>
+          <div class="row center between mt6"><span class="price t-brand" style="font-size:16px;"><span class="cur">¥</span>5.5</span><button class="add-btn" data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+        </div>
+        <div class="gcard" data-stepper data-item='{"id":"g6","name":"胡萝卜","price":3.2,"emoji":"🥕","grad":"g-warm"}'>
+          <div class="gm media g-warm"><span class="emoji">🥕</span></div>
+          <div class="t-h3 mt8" style="font-size:13.5px;">水果胡萝卜 500g</div>
+          <div class="t-cap mt2">脆甜可生食</div>
+          <div class="row center between mt6"><span class="price t-brand" style="font-size:16px;"><span class="cur">¥</span>3.2</span><button class="add-btn" data-step="1"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a class="fab-cart" data-go="cart.html"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 7h15l-1.5 9.5a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 7z" stroke-linejoin="round"/><path d="M8 7V6a4 4 0 0 1 8 0v1" stroke-linecap="round"/></svg><span class="n" data-cart-count style="display:none;">0</span></a>
+
+  <nav class="tabbar">
+    <a class="tab" data-go="home.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10" stroke-linejoin="round"/></svg>首页</a>
+    <a class="tab active"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>分类</a>
+    <a class="tab center" data-go="wish.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.3-9.3-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.3 12 19 16.7 12 21 12 21z"/></svg>我想吃</a>
+    <a class="tab" data-go="cart.html"><span style="position:relative;display:inline-block;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7h15l-1.5 9.5a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 7z" stroke-linejoin="round"/><path d="M8 7V6a4 4 0 0 1 8 0v1" stroke-linecap="round"/></svg><span class="cart-dot" data-cart-count style="display:none;">0</span></span>购物车</a>
+    <a class="tab" data-go="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6" stroke-linecap="round"/></svg>我的</a>
+  </nav>
+  <div class="home-indicator"></div>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

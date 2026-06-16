@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>菜单定制</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+<style>
+  .opt{ padding:9px 16px; border-radius:var(--r-pill); background:var(--surface); color:var(--ink-2); font-size:14px; font-weight:600; box-shadow:var(--sh-1); }
+  .opt.active{ background:var(--brand); color:#fff; box-shadow:var(--sh-brand); }
+  .opt.multi.active{ background:var(--ink); }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="brand-hero" style="flex:none;">
+    <div class="statusbar on-brand"><span data-clock>9:41</span>
+      <span class="sb-right">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9h3v6H2zM7 6h3v9H7zM12 3h3v12h-3zM17 7h3v8h-3z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/></svg>
+        <svg viewBox="0 0 26 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="18" height="10" rx="3"/><rect x="4" y="9" width="13" height="6" rx="1.5" fill="currentColor" stroke="none"/></svg>
+      </span>
+    </div>
+    <div class="navbar on-brand" style="padding-bottom:8px;">
+      <button class="nav-btn" data-go="wish.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <span class="nav-title">菜单定制</span>
+    </div>
+    <div class="chan-tabs" style="padding-top:0;padding-bottom:6px;">
+      <a class="ct" data-go="wish.html">我想吃</a>
+      <a class="ct" data-go="weekly.html">我的周菜单</a>
+      <a class="ct active">菜单定制</a>
+    </div>
+  </div>
+
+  <div class="page has-cta">
+    <div class="page-pad" style="padding-top:16px;">
+      <div class="t-largetitle">定制你的<br>专属一周餐单</div>
+      <div class="t-sub mt8">告诉我们你的口味，AI 帮你智能排餐</div>
+    </div>
+
+    <!-- goal -->
+    <div class="page-pad mt20">
+      <div class="t-h3 mb12">🎯 饮食目标</div>
+      <div class="row gap10 wrap">
+        <span class="opt active" data-toggle-group="goal">营养均衡</span>
+        <span class="opt" data-toggle-group="goal" data-toast="已选 低卡减脂">低卡减脂</span>
+        <span class="opt" data-toggle-group="goal" data-toast="已选 增肌补蛋白">增肌补蛋白</span>
+        <span class="opt" data-toggle-group="goal" data-toast="已选 轻食养生">轻食养生</span>
+      </div>
+    </div>
+
+    <!-- taste -->
+    <div class="page-pad mt24">
+      <div class="t-h3 mb12">🌶️ 口味偏好</div>
+      <div class="row gap10 wrap">
+        <span class="opt" data-toggle-group="taste" data-toast="清淡">清淡</span>
+        <span class="opt active" data-toggle-group="taste">适中</span>
+        <span class="opt" data-toggle-group="taste" data-toast="重口">香辣重口</span>
+      </div>
+    </div>
+
+    <!-- cuisine multi -->
+    <div class="page-pad mt24">
+      <div class="t-h3 mb12">🍜 喜欢的菜系 <span class="t-cap">可多选</span></div>
+      <div class="row gap10 wrap">
+        <span class="opt multi active" data-multi>本帮菜</span>
+        <span class="opt multi active" data-multi>川湘菜</span>
+        <span class="opt multi" data-multi>闽粤菜</span>
+        <span class="opt multi" data-multi>西式简餐</span>
+        <span class="opt multi" data-multi>面食</span>
+      </div>
+    </div>
+
+    <!-- avoid -->
+    <div class="page-pad mt24">
+      <div class="t-h3 mb12">🚫 忌口 <span class="t-cap">可多选</span></div>
+      <div class="row gap10 wrap">
+        <span class="opt multi" data-multi>香菜</span>
+        <span class="opt multi active" data-multi>不吃辣</span>
+        <span class="opt multi" data-multi>海鲜</span>
+        <span class="opt multi" data-multi>牛羊肉</span>
+        <span class="opt multi" data-multi>葱蒜</span>
+      </div>
+    </div>
+
+    <!-- budget -->
+    <div class="page-pad mt24">
+      <div class="row center between mb12"><span class="t-h3">💰 每餐预算</span><span class="price t-brand"><span class="cur">¥</span>25 / 餐</span></div>
+      <div class="card card-pad">
+        <div class="pbar"><i style="width:55%;"></i></div>
+        <div class="row between mt8 t-cap"><span>¥15</span><span>¥25</span><span>¥40</span></div>
+      </div>
+    </div>
+
+    <!-- days -->
+    <div class="page-pad mt24">
+      <div class="t-h3 mb12">📅 就餐日</div>
+      <div class="row gap8 wrap">
+        <span class="opt multi active" data-multi style="min-width:42px;text-align:center;padding:9px 0;">一</span>
+        <span class="opt multi active" data-multi style="min-width:42px;text-align:center;padding:9px 0;">二</span>
+        <span class="opt multi active" data-multi style="min-width:42px;text-align:center;padding:9px 0;">三</span>
+        <span class="opt multi active" data-multi style="min-width:42px;text-align:center;padding:9px 0;">四</span>
+        <span class="opt multi active" data-multi style="min-width:42px;text-align:center;padding:9px 0;">五</span>
+        <span class="opt multi" data-multi style="min-width:42px;text-align:center;padding:9px 0;">六</span>
+        <span class="opt multi" data-multi style="min-width:42px;text-align:center;padding:9px 0;">日</span>
+      </div>
+    </div>
+    <div class="page-bottom"></div>
+  </div>
+
+  <div class="ctabar">
+    <button class="btn btn-primary btn-block" data-go="weekly.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
+      生成我的专属周菜单
+    </button>
+  </div>
+  <div class="home-indicator"></div>
+</div>
+<script src="../assets/app.js"></script>
+<script>
+  // multi-select toggle (independent of single-select groups)
+  document.addEventListener('click', function(e){
+    var t = e.target.closest('[data-multi]');
+    if(t){ t.classList.toggle('active'); }
+  });
+</script>
+</body>
+</html>

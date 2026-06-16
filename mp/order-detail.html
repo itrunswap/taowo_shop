@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>订单详情</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+</head>
+<body>
+<div class="screen">
+  <div class="brand-hero" style="flex:none;">
+    <div class="statusbar on-brand"><span data-clock>9:41</span>
+      <span class="sb-right">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9h3v6H2zM7 6h3v9H7zM12 3h3v12h-3zM17 7h3v8h-3z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/></svg>
+        <svg viewBox="0 0 26 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="18" height="10" rx="3"/><rect x="4" y="9" width="13" height="6" rx="1.5" fill="currentColor" stroke="none"/></svg>
+      </span>
+    </div>
+    <div class="navbar on-brand">
+      <button class="nav-btn" data-go="orders.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <span class="nav-title">订单详情</span>
+    </div>
+    <div class="page-pad" style="padding-bottom:22px;color:#fff;">
+      <div class="t-title" style="color:#fff;">备餐中 · 厨房正在烹饪</div>
+      <div class="t-sub mt4" style="color:rgba(255,255,255,.9);">预计 06/16 11:30 送达 · 距您 122m</div>
+    </div>
+  </div>
+
+  <div class="page has-cta">
+    <!-- progress -->
+    <div class="page-pad" style="margin-top:-12px;">
+      <div class="card card-pad">
+        <div class="row" style="align-items:flex-start;">
+          <div class="col center" style="flex:1;"><div style="width:30px;height:30px;border-radius:50%;background:var(--green);display:grid;place-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M4 12l5 5 11-11" stroke-linecap="round"/></svg></div><span class="t-cap mt6" style="color:var(--ink);font-weight:600;">已下单</span></div>
+          <div style="flex:none;width:36px;height:2px;background:var(--green);margin-top:14px;"></div>
+          <div class="col center" style="flex:1;"><div style="width:30px;height:30px;border-radius:50%;background:var(--green);display:grid;place-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M4 12l5 5 11-11" stroke-linecap="round"/></svg></div><span class="t-cap mt6" style="color:var(--ink);font-weight:600;">已接单</span></div>
+          <div style="flex:none;width:36px;height:2px;background:var(--brand);margin-top:14px;"></div>
+          <div class="col center" style="flex:1;"><div style="width:30px;height:30px;border-radius:50%;background:var(--brand);display:grid;place-items:center;color:#fff;box-shadow:var(--sh-brand);">🍳</div><span class="t-cap mt6 t-brand" style="font-weight:700;">备餐中</span></div>
+          <div style="flex:none;width:36px;height:2px;background:rgba(0,0,0,.1);margin-top:14px;"></div>
+          <div class="col center" style="flex:1;"><div style="width:30px;height:30px;border-radius:50%;background:var(--surface-2);display:grid;place-items:center;color:var(--ink-4);">🛵</div><span class="t-cap mt6">配送中</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- address -->
+    <div class="page-pad mt16">
+      <div class="card card-pad row center gap12">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--brand)"><path d="M12 2c-3.9 0-7 3.1-7 7 0 5 7 13 7 13s7-8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        <div class="flex1"><div class="row center gap8"><span class="t-h3">王经理</span><span class="t-sub">181****6688</span></div><div class="t-sub mt2">德国中心 B座 18F 行政部</div></div>
+      </div>
+    </div>
+
+    <!-- items -->
+    <div class="page-pad mt16">
+      <div class="card" style="overflow:hidden;">
+        <div class="row center gap8 card-pad" style="padding-bottom:6px;"><span style="font-size:18px;">🏪</span><span class="t-h3">123新食堂 · 德国中心店</span></div>
+        <div class="cell"><div class="media g-rose" style="width:50px;height:50px;border-radius:12px;flex:none;"><span style="font-size:26px;">🍱</span></div><div class="flex1" style="margin-left:12px;"><div class="t-h3" style="font-size:14px;">晶香什锦套餐</div><div class="t-cap mt2">×1</div></div><span class="price"><span class="cur">¥</span>21</span></div>
+        <div class="cell"><div class="media g-gold" style="width:50px;height:50px;border-radius:12px;flex:none;"><span style="font-size:26px;">🧋</span></div><div class="flex1" style="margin-left:12px;"><div class="t-h3" style="font-size:14px;">鲜萃柠檬茶</div><div class="t-cap mt2">×1</div></div><span class="price"><span class="cur">¥</span>8</span></div>
+      </div>
+    </div>
+
+    <!-- amounts -->
+    <div class="page-pad mt16">
+      <div class="card card-pad col gap10">
+        <div class="row between"><span class="t-sub">商品金额</span><span class="t-body">¥29.00</span></div>
+        <div class="row between"><span class="t-sub">会员优惠</span><span class="t-brand">-¥6.00</span></div>
+        <div class="row between"><span class="t-sub">优惠券</span><span class="t-brand">-¥5.00</span></div>
+        <div class="row between"><span class="t-sub">配送费</span><span class="t-body">¥0.00</span></div>
+        <div style="height:1px;background:var(--hairline);"></div>
+        <div class="row between"><span class="t-h3">实付款</span><span class="price t-brand" style="font-size:20px;"><span class="cur">¥</span>16.00</span></div>
+      </div>
+    </div>
+
+    <!-- order meta -->
+    <div class="page-pad mt16">
+      <div class="card card-pad col gap10">
+        <div class="row between"><span class="t-sub">订单编号</span><span class="t-body row center gap6">YX20260616093041 <button class="badge badge-ink" data-toast="已复制">复制</button></span></div>
+        <div class="row between"><span class="t-sub">下单时间</span><span class="t-body">2026-06-16 09:30:41</span></div>
+        <div class="row between"><span class="t-sub">支付方式</span><span class="t-body">鲜币支付</span></div>
+      </div>
+    </div>
+    <div class="page-bottom"></div>
+  </div>
+
+  <div class="ctabar">
+    <button class="btn btn-line flex1" data-toast="已申请退款">申请退款</button>
+    <button class="btn btn-primary flex1" data-toast="已联系商家">联系商家</button>
+  </div>
+  <div class="home-indicator"></div>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

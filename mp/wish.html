@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>我想吃 · 菜单</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+<style>
+  .mcard{ background:var(--surface); border-radius:var(--r-lg); box-shadow:var(--sh-2); padding:13px; display:flex; gap:12px; }
+  .mcard .m-media{ width:84px; height:84px; flex:none; }
+  .mcard .m-media .emoji{ font-size:42px; }
+  .mcard .m-info{ flex:1; min-width:0; }
+  .mcard .acts{ display:flex; flex-direction:column; align-items:center; gap:14px; padding-top:2px; }
+  .mcard .acts svg{ width:22px; height:22px; color:var(--ink-3); }
+  .mcard .acts .on svg{ color:var(--brand); }
+  .price-row{ display:flex; align-items:baseline; gap:8px; }
+  .price-row .vip{ font-size:19px; color:var(--brand); }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="brand-hero" style="flex:none;">
+    <div class="statusbar on-brand"><span data-clock>9:41</span>
+      <span class="sb-right">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9h3v6H2zM7 6h3v9H7zM12 3h3v12h-3zM17 7h3v8h-3z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/></svg>
+        <svg viewBox="0 0 26 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="18" height="10" rx="3"/><rect x="4" y="9" width="13" height="6" rx="1.5" fill="currentColor" stroke="none"/></svg>
+      </span>
+    </div>
+    <div class="navbar on-brand" style="padding-bottom:8px;"><span class="nav-title">我想吃</span><div class="spacer"></div>
+      <div class="capsule on-brand"><div class="c-dots"><i></i><i></i><i></i></div><div class="c-sep"></div><div class="c-o"></div></div>
+    </div>
+    <div class="chan-tabs" style="padding-top:0;padding-bottom:6px;">
+      <a class="ct active">我想吃</a>
+      <a class="ct" data-go="weekly.html">我的周菜单</a>
+      <a class="ct" data-go="custom.html">菜单定制</a>
+    </div>
+  </div>
+
+  <div style="flex:1;display:flex;overflow:hidden;">
+    <div class="rail">
+      <div class="ri active" data-toggle-group="wcat">收藏<br>菜单</div>
+      <div class="ri" data-toggle-group="wcat" data-toast="前10菜单">前10<br>菜单</div>
+      <div class="ri" data-toggle-group="wcat" data-toast="分享菜单">分享<br>菜单</div>
+    </div>
+
+    <div class="page" style="flex:1;padding:0 14px;">
+      <!-- 收藏菜单 -->
+      <div class="scroll-head row center between"><span class="t-h3">⭐ 收藏菜单</span><span class="t-cap">8 道</span></div>
+      <div class="col gap14" style="padding-bottom:6px;">
+        <div class="mcard">
+          <a class="m-media media g-warm" data-go="product.html"><span class="emoji">🥩</span></a>
+          <div class="m-info">
+            <div class="row center gap6"><span class="badge badge-new">上新</span><span class="t-h3" style="font-size:15px;">红烧肉套餐</span></div>
+            <div class="t-cap mt4">浓油赤酱 · 肥而不腻 · 配三素</div>
+            <div class="row center between mt8">
+              <div class="price-row"><span class="price vip"><span class="cur">¥</span>28</span><span class="t-cap">会员价</span><span class="badge badge-gold">团餐¥24</span></div>
+              <button class="add-btn" data-add='{"id":"w1","name":"红烧肉套餐","price":28,"emoji":"🥩","grad":"g-warm"}'><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+            </div>
+          </div>
+          <div class="acts"><button data-fav class="on"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.3-9.3-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.3 12 19 16.7 12 21 12 21z"/></svg></button>
+            <button data-toast="已分享给同事"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8 11l8-5M8 13l8 5" stroke-linecap="round"/></svg></button>
+          </div>
+        </div>
+
+        <div class="mcard">
+          <a class="m-media media g-rose" data-go="product.html"><span class="emoji">🍗</span></a>
+          <div class="m-info">
+            <div class="row center gap6"><span class="badge badge-brand">招牌</span><span class="t-h3" style="font-size:15px;">辣子鸡套餐</span></div>
+            <div class="t-cap mt4">麻辣鲜香 · 干煸入味 · 川味经典</div>
+            <div class="row center between mt8">
+              <div class="price-row"><span class="price vip"><span class="cur">¥</span>26</span><span class="t-cap">会员价</span><span class="badge badge-gold">团餐¥24</span></div>
+              <button class="add-btn" data-add='{"id":"w2","name":"辣子鸡套餐","price":26,"emoji":"🍗","grad":"g-rose"}'><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+            </div>
+          </div>
+          <div class="acts"><button data-fav class="on"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.3-9.3-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.3 12 19 16.7 12 21 12 21z"/></svg></button>
+            <button data-toast="已分享给同事"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8 11l8-5M8 13l8 5" stroke-linecap="round"/></svg></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 前10菜单 -->
+      <div class="scroll-head row center between mt16"><span class="t-h3">🔥 前10菜单</span><span class="t-cap">本周热度榜</span></div>
+      <div class="col gap14" style="padding-bottom:6px;">
+        <div class="mcard">
+          <a class="m-media media g-cream" data-go="product.html"><span class="emoji">🍲</span><span class="ph-badge badge badge-ink" style="background:var(--ink);color:#fff;">No.1</span></a>
+          <div class="m-info">
+            <div class="row center gap6"><span class="badge badge-gold">人气</span><span class="t-h3" style="font-size:15px;">回锅肉套餐</span></div>
+            <div class="t-cap mt4">蒜苗回锅 · 微辣下饭 · 周售1900+</div>
+            <div class="row center between mt8">
+              <div class="price-row"><span class="price vip"><span class="cur">¥</span>27</span><span class="t-cap">会员价</span><span class="badge badge-gold">团餐¥24</span></div>
+              <button class="add-btn" data-add='{"id":"w3","name":"回锅肉套餐","price":27,"emoji":"🍲","grad":"g-cream"}'><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+            </div>
+          </div>
+          <div class="acts"><button data-fav><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.3-9.3-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.3 12 19 16.7 12 21 12 21z"/></svg></button>
+            <button data-toast="已分享给同事"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8 11l8-5M8 13l8 5" stroke-linecap="round"/></svg></button>
+          </div>
+        </div>
+        <div class="mcard">
+          <a class="m-media media g-gold" data-go="product.html"><span class="emoji">🍡</span><span class="ph-badge badge badge-ink" style="background:var(--ink);color:#fff;">No.2</span></a>
+          <div class="m-info">
+            <div class="row center gap6"><span class="badge badge-new">爆点</span><span class="t-h3" style="font-size:15px;">狮子头套餐</span></div>
+            <div class="t-cap mt4">手打肉圆 · 入口即化 · 配青菜</div>
+            <div class="row center between mt8">
+              <div class="price-row"><span class="price vip"><span class="cur">¥</span>29</span><span class="t-cap">会员价</span><span class="badge badge-gold">团餐¥24</span></div>
+              <button class="add-btn" data-add='{"id":"w4","name":"狮子头套餐","price":29,"emoji":"🍡","grad":"g-gold"}'><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+            </div>
+          </div>
+          <div class="acts"><button data-fav><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.3-9.3-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.3 12 19 16.7 12 21 12 21z"/></svg></button>
+            <button data-toast="已分享给同事"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8 11l8-5M8 13l8 5" stroke-linecap="round"/></svg></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 分享菜单 -->
+      <div class="scroll-head row center between mt16"><span class="t-h3">💞 分享菜单</span><span class="t-cap">分享得鲜币</span></div>
+      <div class="col gap14" style="padding-bottom:6px;">
+        <div class="mcard">
+          <a class="m-media media g-warm" data-go="product.html"><span class="emoji">🥘</span></a>
+          <div class="m-info">
+            <div class="row center gap6"><span class="badge badge-gold">人气</span><span class="t-h3" style="font-size:15px;">丸子肉套餐</span></div>
+            <div class="t-cap mt4">分享给好友一起拼，立省 ¥3</div>
+            <div class="row center between mt8">
+              <div class="price-row"><span class="price vip"><span class="cur">¥</span>27</span><span class="badge badge-green">已分享 6 次</span></div>
+              <button class="btn btn-soft btn-sm" data-toast="已生成分享卡片"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8 11l8-5M8 13l8 5" stroke-linecap="round"/></svg>分享</button>
+            </div>
+          </div>
+        </div>
+        <div class="mcard">
+          <a class="m-media media g-gold" data-go="product.html"><span class="emoji">🍡</span></a>
+          <div class="m-info">
+            <div class="row center gap6"><span class="badge badge-new">爆点</span><span class="t-h3" style="font-size:15px;">狮子头套餐</span></div>
+            <div class="t-cap mt4">分享给好友一起拼，立省 ¥3</div>
+            <div class="row center between mt8">
+              <div class="price-row"><span class="price vip"><span class="cur">¥</span>29</span><span class="badge badge-green">已分享 2 次</span></div>
+              <button class="btn btn-soft btn-sm" data-toast="已生成分享卡片"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8 11l8-5M8 13l8 5" stroke-linecap="round"/></svg>分享</button>
+            </div>
+          </div>
+        </div>
+        <div class="page-bottom" style="height:90px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <a class="fab-cart" data-go="cart.html"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 7h15l-1.5 9.5a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 7z" stroke-linejoin="round"/><path d="M8 7V6a4 4 0 0 1 8 0v1" stroke-linecap="round"/></svg><span class="n" data-cart-count style="display:none;">0</span></a>
+
+  <nav class="tabbar">
+    <a class="tab" data-go="home.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10" stroke-linejoin="round"/></svg>首页</a>
+    <a class="tab" data-go="category.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>分类</a>
+    <a class="tab center active"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.3-9.3-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.3 12 19 16.7 12 21 12 21z"/></svg>我想吃</a>
+    <a class="tab" data-go="cart.html"><span style="position:relative;display:inline-block;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7h15l-1.5 9.5a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 7z" stroke-linejoin="round"/><path d="M8 7V6a4 4 0 0 1 8 0v1" stroke-linecap="round"/></svg><span class="cart-dot" data-cart-count style="display:none;">0</span></span>购物车</a>
+    <a class="tab" data-go="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6" stroke-linecap="round"/></svg>我的</a>
+  </nav>
+  <div class="home-indicator"></div>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

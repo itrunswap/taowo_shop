@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>我的周菜单</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+</head>
+<body>
+<div class="screen">
+  <div class="brand-hero" style="flex:none;">
+    <div class="statusbar on-brand"><span data-clock>9:41</span>
+      <span class="sb-right">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9h3v6H2zM7 6h3v9H7zM12 3h3v12h-3zM17 7h3v8h-3z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/></svg>
+        <svg viewBox="0 0 26 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="18" height="10" rx="3"/><rect x="4" y="9" width="13" height="6" rx="1.5" fill="currentColor" stroke="none"/></svg>
+      </span>
+    </div>
+    <div class="navbar on-brand" style="padding-bottom:8px;">
+      <button class="nav-btn" data-go="wish.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <span class="nav-title">我的周菜单</span>
+    </div>
+    <div class="chan-tabs" style="padding-top:0;padding-bottom:6px;">
+      <a class="ct" data-go="wish.html">我想吃</a>
+      <a class="ct active">我的周菜单</a>
+      <a class="ct" data-go="custom.html">菜单定制</a>
+    </div>
+  </div>
+
+  <div class="page has-cta">
+    <!-- summary -->
+    <div class="page-pad" style="margin-top:-2px;padding-top:14px;">
+      <div class="card brand-hero" style="padding:18px;color:#fff;box-shadow:var(--sh-3);">
+        <div class="row between center">
+          <div><div class="t-cap" style="color:rgba(255,255,255,.85);">本周 06/16 - 06/22</div><div class="t-title" style="color:#fff;margin-top:4px;">5 个工作日 · 5 餐</div></div>
+          <div class="txt-r"><div class="t-cap" style="color:rgba(255,255,255,.85);">预计</div><div class="price" style="font-size:24px;color:#fff;"><span class="cur">¥</span>120</div><div class="t-cap" style="color:#fff;">已省 ¥42</div></div>
+        </div>
+        <div class="row center between mt16" style="background:rgba(255,255,255,.18);border-radius:14px;padding:12px 14px;">
+          <div class="row center gap8"><span style="font-size:18px;">🔁</span><span style="font-weight:600;font-size:14px;">每周自动续订</span></div>
+          <div style="width:46px;height:28px;border-radius:99px;background:#fff;position:relative;"><i style="position:absolute;top:3px;right:3px;width:22px;height:22px;border-radius:50%;background:var(--brand);"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- days -->
+    <div class="page-pad mt16 col gap12">
+      <!-- mon -->
+      <div class="card card-pad row center gap12">
+        <div class="col center" style="width:44px;flex:none;"><span class="t-h3 t-brand">周一</span><span class="t-cap">06/16</span></div>
+        <div style="width:1px;height:44px;background:var(--hairline);"></div>
+        <a class="media g-rose" data-go="product.html" style="width:54px;height:54px;border-radius:12px;flex:none;"><span style="font-size:28px;">🍱</span></a>
+        <div class="flex1"><div class="t-h3" style="font-size:14px;">晶香什锦套餐</div><div class="t-cap mt2">2荤1素1主食</div></div>
+        <button class="badge badge-line" data-go="canteen.html">更换</button>
+      </div>
+      <!-- tue -->
+      <div class="card card-pad row center gap12">
+        <div class="col center" style="width:44px;flex:none;"><span class="t-h3">周二</span><span class="t-cap">06/17</span></div>
+        <div style="width:1px;height:44px;background:var(--hairline);"></div>
+        <a class="media g-warm" data-go="product.html" style="width:54px;height:54px;border-radius:12px;flex:none;"><span style="font-size:28px;">🍗</span></a>
+        <div class="flex1"><div class="t-h3" style="font-size:14px;">麻油鸡套餐</div><div class="t-cap mt2">1荤2素1主食</div></div>
+        <button class="badge badge-line" data-go="canteen.html">更换</button>
+      </div>
+      <!-- wed empty -->
+      <div class="card card-pad row center gap12" style="border:1.5px dashed var(--hairline);box-shadow:none;background:transparent;">
+        <div class="col center" style="width:44px;flex:none;"><span class="t-h3">周三</span><span class="t-cap">06/18</span></div>
+        <div style="width:1px;height:44px;background:var(--hairline);"></div>
+        <div class="flex1 col center" style="align-items:flex-start;"><div class="t-sub">还没安排这一天</div></div>
+        <button class="btn btn-soft btn-sm" data-go="canteen.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>添加</button>
+      </div>
+      <!-- thu -->
+      <div class="card card-pad row center gap12">
+        <div class="col center" style="width:44px;flex:none;"><span class="t-h3">周四</span><span class="t-cap">06/19</span></div>
+        <div style="width:1px;height:44px;background:var(--hairline);"></div>
+        <a class="media g-cream" data-go="product.html" style="width:54px;height:54px;border-radius:12px;flex:none;"><span style="font-size:28px;">🍲</span></a>
+        <div class="flex1"><div class="t-h3" style="font-size:14px;">回锅肉套餐</div><div class="t-cap mt2">2荤1素1汤</div></div>
+        <button class="badge badge-line" data-go="canteen.html">更换</button>
+      </div>
+      <!-- fri -->
+      <div class="card card-pad row center gap12">
+        <div class="col center" style="width:44px;flex:none;"><span class="t-h3">周五</span><span class="t-cap">06/20</span></div>
+        <div style="width:1px;height:44px;background:var(--hairline);"></div>
+        <a class="media g-green" data-go="product.html" style="width:54px;height:54px;border-radius:12px;flex:none;"><span style="font-size:28px;">🥗</span></a>
+        <div class="flex1"><div class="t-h3" style="font-size:14px;">轻食鸡胸沙拉</div><div class="t-cap mt2">健身轻负担</div></div>
+        <button class="badge badge-line" data-go="canteen.html">更换</button>
+      </div>
+    </div>
+    <div class="page-bottom"></div>
+  </div>
+
+  <div class="ctabar">
+    <button class="btn btn-line flex1" data-go="custom.html">智能定制</button>
+    <button class="btn btn-primary flex1" data-go="checkout.html">确认本周菜单</button>
+  </div>
+  <div class="home-indicator"></div>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

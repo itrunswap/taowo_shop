@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>系统设置 · 云鲜运营台</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/admin.css">
+</head>
+<body data-page="settings">
+<div class="admin">
+  <aside class="sidebar" id="side"></aside>
+  <div class="main">
+    <header class="topbar">
+      <div><div class="crumb">分析与设置</div><div class="ptitle">系统设置</div></div>
+      <button class="abtn abtn-primary" style="margin-left:auto;" data-toast="设置已保存">保存更改</button>
+    </header>
+
+    <main class="content">
+      <div class="page-title" style="margin-bottom:18px;">系统设置</div>
+
+      <div class="atabs" style="margin-bottom:20px;">
+        <div class="at active" data-tab>门店管理</div>
+        <div class="at" data-tab data-toast-on="配送设置">配送设置</div>
+        <div class="at" data-tab data-toast-on="员工与权限">员工与权限</div>
+        <div class="at" data-tab data-toast-on="支付与鲜币">支付与鲜币</div>
+        <div class="at" data-tab data-toast-on="消息通知">消息通知</div>
+      </div>
+
+      <div class="grid g-2" style="align-items:start;">
+        <!-- stores -->
+        <div class="panel">
+          <div class="panel-head"><div class="ph-t">门店列表</div><button class="abtn abtn-sm abtn-line" style="margin-left:auto;" data-toast="新增门店">+ 新增门店</button></div>
+          <div class="panel-body col gap12">
+            <div class="row center gap12" style="padding:14px;border:1px solid var(--brand);border-radius:14px;background:var(--brand-soft-2);">
+              <div class="mini-media tint-brand" style="font-size:18px;">🏪</div>
+              <div class="flex1"><div class="tt-name">德国中心店</div><div class="tt-sub">浦东·德国中心 · 营业中 08:00-20:00</div></div>
+              <span class="pill pill-green">营业中</span>
+            </div>
+            <div class="row center gap12" style="padding:14px;border:1px solid var(--hairline);border-radius:14px;">
+              <div class="mini-media tint-blue" style="font-size:18px;">🏪</div>
+              <div class="flex1"><div class="tt-name">云图科技店</div><div class="tt-sub">张江·云图大厦 · 营业中</div></div>
+              <span class="pill pill-green">营业中</span>
+            </div>
+            <div class="row center gap12" style="padding:14px;border:1px solid var(--hairline);border-radius:14px;">
+              <div class="mini-media tint-gold" style="font-size:18px;">🏪</div>
+              <div class="flex1"><div class="tt-name">莘庄中心厨房</div><div class="tt-sub">闵行·莘庄 · 中央厨房</div></div>
+              <span class="pill pill-gray">休息中</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- store config -->
+        <div class="panel">
+          <div class="panel-head"><div class="ph-t">德国中心店 · 营业设置</div></div>
+          <div class="panel-body">
+            <div class="field"><label class="label">门店名称</label><input class="input" value="123新食堂 · 德国中心店"></div>
+            <div class="grid g-2" style="gap:18px;">
+              <div class="field"><label class="label">营业开始</label><input class="input" value="08:00"></div>
+              <div class="field"><label class="label">营业结束</label><input class="input" value="20:00"></div>
+            </div>
+            <div class="field"><label class="label">每日截单时间</label><input class="input" value="10:00"><div class="hint">超过该时间将无法预订当日餐</div></div>
+            <div style="border-top:1px solid var(--hairline);margin:6px 0 18px;"></div>
+            <div class="row between center" style="margin-bottom:16px;"><div><div class="tt-name" style="font-size:14px;">接受团餐预订</div><div class="tt-sub">企业可按周菜单预订</div></div><div class="switch on"><i></i></div></div>
+            <div class="row between center" style="margin-bottom:16px;"><div><div class="tt-name" style="font-size:14px;">开启拼好饭</div><div class="tt-sub">允许顾客发起拼团</div></div><div class="switch on"><i></i></div></div>
+            <div class="row between center"><div><div class="tt-name" style="font-size:14px;">自动接单</div><div class="tt-sub">订单自动进入备餐</div></div><div class="switch"><i></i></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- delivery + coins quick config -->
+      <div class="grid g-2" style="margin-top:18px;align-items:start;">
+        <div class="panel">
+          <div class="panel-head"><div class="ph-t">配送设置</div></div>
+          <div class="panel-body">
+            <div class="grid g-2" style="gap:18px;">
+              <div class="field"><label class="label">起送金额(元)</label><input class="input" value="0"></div>
+              <div class="field"><label class="label">配送费(元)</label><input class="input" value="0"></div>
+            </div>
+            <div class="field" style="margin-bottom:0;"><label class="label">配送时段</label>
+              <div class="row gap8 wrap"><span class="chip brand active" data-seg>11:30</span><span class="chip" data-seg data-toast="12:00">12:00</span><span class="chip" data-seg data-toast="12:30">12:30</span><span class="chip" style="border:1px dashed var(--ink-4);background:transparent;" data-toast="新增时段">+ 时段</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><div class="ph-t">支付与鲜币</div></div>
+          <div class="panel-body">
+            <div class="row between center" style="margin-bottom:16px;"><div class="row center gap10"><div class="cell-ic green" style="width:32px;height:32px;"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg></div><span class="tt-name" style="font-size:14px;">微信支付</span></div><div class="switch on"><i></i></div></div>
+            <div class="row between center" style="margin-bottom:16px;"><div class="row center gap10"><div class="cell-ic gold" style="width:32px;height:32px;">🪙</div><span class="tt-name" style="font-size:14px;">鲜币支付</span></div><div class="switch on"><i></i></div></div>
+            <div class="field" style="margin:6px 0 0;"><label class="label">充值赠送比例</label><input class="input" value="充100送5%"><div class="hint">影响小程序「买鲜币」页面的赠送档位</div></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="../assets/admin.js"></script>
+</body>
+</html>

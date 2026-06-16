@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>我的</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+</head>
+<body>
+<div class="screen">
+  <div class="brand-hero" style="flex:none;">
+    <div class="statusbar on-brand"><span data-clock>9:41</span>
+      <span class="sb-right">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 9h3v6H2zM7 6h3v9H7zM12 3h3v12h-3zM17 7h3v8h-3z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/></svg>
+        <svg viewBox="0 0 26 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="18" height="10" rx="3"/><rect x="4" y="9" width="13" height="6" rx="1.5" fill="currentColor" stroke="none"/></svg>
+      </span>
+    </div>
+    <div class="navbar on-brand"><span class="nav-title">我的</span><div class="spacer"></div><button class="nav-btn" data-toast="设置"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1.2l2-1.6-2-3.4-2.4 1a7 7 0 0 0-2-1.2l-.4-2.6h-4l-.4 2.6a7 7 0 0 0-2 1.2l-2.4-1-2 3.4 2 1.6A7 7 0 0 0 5 12a7 7 0 0 0 .1 1.2l-2 1.6 2 3.4 2.4-1a7 7 0 0 0 2 1.2l.4 2.6h4l.4-2.6a7 7 0 0 0 2-1.2l2.4 1 2-3.4-2-1.6A7 7 0 0 0 19 12z"/></svg></button></div>
+
+    <!-- user header -->
+    <div class="page-pad" style="padding-bottom:20px;">
+      <div class="row center gap14">
+        <div class="avatar" style="width:62px;height:62px;font-size:24px;border:2px solid rgba(255,255,255,.6);">王</div>
+        <div class="flex1">
+          <div class="row center gap8"><span class="t-title" style="color:#fff;">王经理</span><span class="vip-pill"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 6.9H22l-6 4.6 2.3 7L12 16.9 5.7 20.5 8 13.5 2 8.9h7.6z"/></svg>黄金会员</span></div>
+          <div class="t-sub mt4" style="color:rgba(255,255,255,.85);">181****6688 · 德国中心店</div>
+        </div>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M9 6l6 6-6 6" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="page has-tabbar">
+    <!-- assets card -->
+    <div class="page-pad" style="margin-top:-12px;">
+      <div class="card card-pad row between txt-c">
+        <a class="col flex1" data-go="coins.html"><div class="price" style="font-size:20px;">128</div><div class="t-cap mt2">鲜币</div></a>
+        <a class="col flex1" data-go="member.html"><div class="price" style="font-size:20px;">2860</div><div class="t-cap mt2">成长值</div></a>
+        <a class="col flex1" data-toast="我的优惠券"><div class="price" style="font-size:20px;">12</div><div class="t-cap mt2">优惠券</div></a>
+        <a class="col flex1" data-fav><div class="price" style="font-size:20px;">36</div><div class="t-cap mt2">收藏</div></a>
+      </div>
+    </div>
+
+    <!-- order status -->
+    <div class="page-pad mt16">
+      <div class="card card-pad">
+        <div class="row center between mb12"><span class="t-h3">我的订单</span><a class="more t-cap" data-go="orders.html" style="color:var(--ink-3);">全部订单 ›</a></div>
+        <div class="row between txt-c">
+          <a class="col center flex1 gap6" data-go="orders.html"><span style="font-size:24px;">💳</span><span class="t-cap" style="color:var(--ink-2);">待付款</span></a>
+          <a class="col center flex1 gap6" data-go="orders.html"><span style="font-size:24px;">🍳</span><span class="t-cap" style="color:var(--ink-2);">备餐中</span></a>
+          <a class="col center flex1 gap6" data-go="orders.html"><span style="font-size:24px;">🛵</span><span class="t-cap" style="color:var(--ink-2);">配送中</span></a>
+          <a class="col center flex1 gap6" data-go="orders.html"><span style="font-size:24px;">⭐</span><span class="t-cap" style="color:var(--ink-2);">待评价</span></a>
+          <a class="col center flex1 gap6" data-go="orders.html"><span style="font-size:24px;">↩️</span><span class="t-cap" style="color:var(--ink-2);">退款</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- my butler banner -->
+    <div class="page-pad mt16">
+      <a class="card card-pad row center gap12" data-go="butler.html" style="background:linear-gradient(135deg,#3a2c1a,#1d1d1f);">
+        <span style="font-size:30px;">🧑‍🍳</span>
+        <div class="flex1"><div class="t-h3" style="color:#fff;">我的专属管家 · 李管家</div><div class="t-cap mt2" style="color:rgba(255,255,255,.6);">在线 · 点击咨询排餐</div></div>
+        <span class="badge badge-gold">咨询</span>
+      </a>
+    </div>
+
+    <!-- services -->
+    <div class="page-pad mt16">
+      <div class="card card-pad">
+        <div class="t-h3 mb12">常用服务</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px 4px;text-align:center;">
+          <a class="col center gap6" data-go="weekly.html"><span style="font-size:26px;">📅</span><span class="t-cap" style="color:var(--ink);">我的周菜单</span></a>
+          <a class="col center gap6" data-go="pinhaofan.html"><span style="font-size:26px;">🤝</span><span class="t-cap" style="color:var(--ink);">我的拼团</span></a>
+          <a class="col center gap6" data-toast="收货地址"><span style="font-size:26px;">📍</span><span class="t-cap" style="color:var(--ink);">收货地址</span></a>
+          <a class="col center gap6" data-toast="我的钱包"><span style="font-size:26px;">💰</span><span class="t-cap" style="color:var(--ink);">我的钱包</span></a>
+          <a class="col center gap6" data-fav><span style="font-size:26px;">❤️</span><span class="t-cap" style="color:var(--ink);">我的收藏</span></a>
+          <a class="col center gap6" data-toast="我的评价"><span style="font-size:26px;">✍️</span><span class="t-cap" style="color:var(--ink);">我的评价</span></a>
+          <a class="col center gap6" data-go="franchise.html"><span style="font-size:26px;">🏪</span><span class="t-cap" style="color:var(--ink);">管家加盟</span></a>
+          <a class="col center gap6" data-toast="联系客服"><span style="font-size:26px;">🎧</span><span class="t-cap" style="color:var(--ink);">客服</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- settings list -->
+    <div class="page-pad mt16">
+      <div class="cell-group">
+        <a class="cell" data-toast="账户与安全"><div class="cell-ic blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" stroke-linejoin="round"/></svg></div><span class="cell-t">账户与安全</span><svg class="cell-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6" stroke-linecap="round"/></svg></a>
+        <a class="cell" data-toast="企业认证 · 解锁团餐价"><div class="cell-ic gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8l9-5 9 5v13M9 21v-6h6v6" stroke-linejoin="round"/></svg></div><span class="cell-t">企业认证</span><span class="cell-v">去认证</span><svg class="cell-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6" stroke-linecap="round"/></svg></a>
+        <a class="cell" data-toast="设置"><div class="cell-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1.2l2-1.6-2-3.4-2.4 1a7 7 0 0 0-2-1.2l-.4-2.6h-4l-.4 2.6a7 7 0 0 0-2 1.2l-2.4-1-2 3.4 2 1.6A7 7 0 0 0 5 12a7 7 0 0 0 .1 1.2l-2 1.6 2 3.4 2.4-1a7 7 0 0 0 2 1.2l.4 2.6h4l.4-2.6a7 7 0 0 0 2-1.2l2.4 1 2-3.4-2-1.6z"/></svg></div><span class="cell-t">设置</span><svg class="cell-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+    <div class="page-bottom"></div>
+  </div>
+
+  <nav class="tabbar">
+    <a class="tab" data-go="home.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10" stroke-linejoin="round"/></svg>首页</a>
+    <a class="tab" data-go="category.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>分类</a>
+    <a class="tab center" data-go="wish.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.3-9.3-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.3 12 19 16.7 12 21 12 21z"/></svg>我想吃</a>
+    <a class="tab" data-go="cart.html"><span style="position:relative;display:inline-block;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7h15l-1.5 9.5a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 7z" stroke-linejoin="round"/><path d="M8 7V6a4 4 0 0 1 8 0v1" stroke-linecap="round"/></svg><span class="cart-dot" data-cart-count style="display:none;">0</span></span>购物车</a>
+    <a class="tab active"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6z"/></svg>我的</a>
+  </nav>
+  <div class="home-indicator"></div>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

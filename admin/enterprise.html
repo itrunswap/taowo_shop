@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>团餐企业 · 云鲜运营台</title>
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/admin.css">
+</head>
+<body data-page="enterprise">
+<div class="admin">
+  <aside class="sidebar" id="side"></aside>
+  <div class="main">
+    <header class="topbar">
+      <div><div class="crumb">用户增长</div><div class="ptitle">团餐企业客户</div></div>
+      <div class="tsearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4" stroke-linecap="round"/></svg>搜索企业名称</div>
+      <button class="ticon" data-toast="导出客户"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </header>
+
+    <main class="content">
+      <div class="row between center" style="margin-bottom:18px;">
+        <div><div class="page-title">团餐企业客户</div><div class="page-desc">B 端企业签约、排餐与对账管理</div></div>
+        <button class="abtn abtn-primary" data-toast="新增企业客户"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>新增企业</button>
+      </div>
+
+      <div class="grid g-4" style="margin-bottom:18px;">
+        <div class="stat"><div class="s-top"><div class="s-ic tint-brand">🏢</div></div><div class="s-label">签约企业</div><div class="s-value">1,280</div><div class="s-delta up">▲ 32 本月</div></div>
+        <div class="stat"><div class="s-top"><div class="s-ic tint-green">✅</div></div><div class="s-label">在服务中</div><div class="s-value">1,156</div></div>
+        <div class="stat"><div class="s-top"><div class="s-ic tint-gold">🍱</div></div><div class="s-label">本月团餐订单</div><div class="s-value">48,600</div></div>
+        <div class="stat"><div class="s-top"><div class="s-ic tint-blue">💴</div></div><div class="s-label">企业月消费</div><div class="s-value">¥2.4M</div></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-body" style="padding:0 20px;">
+          <div class="atabs">
+            <div class="at active" data-tab>全部企业</div>
+            <div class="at" data-tab data-toast-on="服务中">服务中</div>
+            <div class="at" data-tab data-toast-on="待对账">待对账</div>
+            <div class="at" data-tab data-toast-on="合约到期">合约到期</div>
+          </div>
+        </div>
+        <table class="table">
+          <thead><tr><th>企业</th><th>联系人</th><th>在职人数</th><th>本月订单</th><th>专属管家</th><th>合约状态</th><th>操作</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="row center gap10"><div class="mini-media tint-brand" style="font-size:18px;">🏢</div><div><div class="tt-name">德国中心商务区</div><div class="tt-sub">浦东 · 综合体</div></div></div></td>
+              <td><div class="tt-name">王经理</div><div class="tt-sub">181****6688</div></td>
+              <td>1,200</td><td class="tt-name">3,840 单</td>
+              <td><span class="pill pill-gold">李管家</span></td>
+              <td><span class="pill pill-green">服务中</span></td>
+              <td><div class="row gap6"><button class="abtn abtn-sm abtn-line" data-go="menu-schedule.html">排餐</button><button class="abtn abtn-sm abtn-ghost" data-toast="对账单已生成">对账</button></div></td>
+            </tr>
+            <tr>
+              <td><div class="row center gap10"><div class="mini-media tint-blue" style="font-size:18px;">🏢</div><div><div class="tt-name">云图科技</div><div class="tt-sub">张江 · 互联网</div></div></div></td>
+              <td><div class="tt-name">李行政</div><div class="tt-sub">138****0420</div></td>
+              <td>560</td><td class="tt-name">1,860 单</td>
+              <td><span class="pill pill-gold">周管家</span></td>
+              <td><span class="pill pill-green">服务中</span></td>
+              <td><div class="row gap6"><button class="abtn abtn-sm abtn-line" data-go="menu-schedule.html">排餐</button><button class="abtn abtn-sm abtn-ghost" data-toast="对账单已生成">对账</button></div></td>
+            </tr>
+            <tr>
+              <td><div class="row center gap10"><div class="mini-media tint-green" style="font-size:18px;">🏢</div><div><div class="tt-name">恒生医药集团</div><div class="tt-sub">闵行 · 制造</div></div></div></td>
+              <td><div class="tt-name">赵主管</div><div class="tt-sub">137****8890</div></td>
+              <td>2,300</td><td class="tt-name">6,210 单</td>
+              <td><span class="pill pill-gold">张管家</span></td>
+              <td><span class="pill pill-gold">待对账</span></td>
+              <td><div class="row gap6"><button class="abtn abtn-sm abtn-primary" data-toast="对账单已发送">去对账</button><button class="abtn abtn-sm abtn-ghost" data-go="menu-schedule.html">排餐</button></div></td>
+            </tr>
+            <tr>
+              <td><div class="row center gap10"><div class="mini-media tint-gold" style="font-size:18px;">🏢</div><div><div class="tt-name">星辰传媒</div><div class="tt-sub">徐汇 · 文化</div></div></div></td>
+              <td><div class="tt-name">孙总助</div><div class="tt-sub">186****9034</div></td>
+              <td>180</td><td class="tt-name">520 单</td>
+              <td><span class="pill pill-gray">待分配</span></td>
+              <td><span class="pill pill-red">15天后到期</span></td>
+              <td><div class="row gap6"><button class="abtn abtn-sm abtn-primary" data-toast="续约提醒已发送">续约</button><button class="abtn abtn-sm abtn-ghost" data-toast="详情">详情</button></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="../assets/admin.js"></script>
+</body>
+</html>
